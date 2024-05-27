@@ -1,0 +1,15 @@
+Start checking preparation for floorplan ...
+Error: No preferred routing direction defined for routing layer M1 (DPUI-088)
+Error: No preferred routing direction defined for routing layer M2 (DPUI-088)
+Error: No preferred routing direction defined for routing layer M3 (DPUI-088)
+Error: No preferred routing direction defined for routing layer M4 (DPUI-088)
+Error: No preferred routing direction defined for routing layer M5 (DPUI-088)
+Error: No preferred routing direction defined for routing layer M6 (DPUI-088)
+Error: No preferred routing direction defined for routing layer M7 (DPUI-088)
+Error: No preferred routing direction defined for routing layer M8 (DPUI-088)
+Error: No preferred routing direction defined for routing layer M9 (DPUI-088)
+Error: No layer with the routing direction horizontal (DPUI-103)
+Error: No layer with the routing direction vertical (DPUI-103)
+End checking preparation for floorplan.
+
+1

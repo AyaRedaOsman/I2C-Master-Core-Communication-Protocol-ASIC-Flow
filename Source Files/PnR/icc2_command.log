@@ -1,0 +1,171 @@
+#@ # 
+#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Sun May 19 23:17:52 2024
+#@ # Run by: ICer@IC_EDA
+#@ 
+
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+open_lib /home/ICer/logic_project/PnR/I2C -edit
+open_block /home/ICer/logic_project/PnR/I2C:CTS.design
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetX} -value {0.005}
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetY} -value {0.005}
+link_block
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-77}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-77}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group shape via placement_blockage }
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA8 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8 -value false
+win_set_filter -visible -class routing_blockage -layer {25-29}
+win_set_filter -visible -class shape -filter {} -layer {25-29}
+win_set_filter -visible -class via -filter {} -layer {25-29}
+win_set_filter -visible -class terminal -filter {}  -layer {25-29}
+win_set_filter -class routing_blockage -layer {25-29}
+win_set_filter -class shape -filter {} -layer {25-29}
+win_set_filter -class via -filter {} -layer {25-29}
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1 -value true
+source ./scripts/Routing.tcl
+source ./scripts/checks.tcl
+source ./scripts/chip_finishing.tcl
+set STD_FILLERS " SHFILL128 SHFILL64 SHFILL1 "
+create_stdcell_filler -lib_cell $STD_FILLERS
+connect_pg_net -automatic
+save_block -as routing_with_filler
+#####################################
+gui_scroll -window [gui_get_current_window -types Layout -view] -hrel -0.25
+gui_scroll -window [gui_get_current_window -types Layout -view] -hrel -0.25
+gui_scroll -window [gui_get_current_window -types Layout -view] -hrel -0.25
+gui_scroll -window [gui_get_current_window -types Layout -view] -hrel -0.25
+gui_zoom -window [gui_get_current_window -view] -factor 2.0
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_zoom -window [gui_get_current_window -view] -factor 2.0
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_zoom -window [gui_get_current_window -view] -factor 2.0
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_zoom -window [gui_get_current_window -view] -factor 2.0
+gui_zoom -window [gui_get_current_window -view] -factor 2.0
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+win_select_objects -slct_targets global -at {10.995 11.495} -radius 0.0069
+win_select_objects -slct_targets global -at {11.215 11.155} -radius 0.0069
+win_select_objects -slct_targets global -at {11.185 11.295} -radius 0.0069
+gui_zoom -window [gui_get_current_window -view] -full
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA8 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8 -value true
+win_set_filter -visible -class routing_blockage -layer {}
+win_set_filter -visible -class shape -filter {} -layer {}
+win_set_filter -visible -class via -filter {} -layer {}
+win_set_filter -visible -class terminal -filter {}  -layer {}
+win_set_filter -class routing_blockage -layer {}
+win_set_filter -class shape -filter {} -layer {}
+win_set_filter -class via -filter {} -layer {}
+change_selection 
+source ./scripts/checks.tcl
+lappend search_path /home/ICer/logic_project/GDS
+lappend search_path /home/ICer/logic_project/LIB
+source ./scripts/Output.tcl
+source ./scripts/Output.tcl
+source ./scripts/Output.tcl
+source ./scripts/Output.tcl
+source ./scripts/Output.tcl
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_zoom -window [gui_get_current_window -view] -full
+############################################################################
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%create_log%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+############################################################################
+#icc2_shell -f ./scripts/Design_setup.tcl | tee syn.log
+gui_start
+############################################################################
+#%%%%%%%%%%%design_Setup%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+############################################################################
+lappend search_path /home/ICer/logic_project/PnR/library_manager
+lappend search_path /home/ICer/logic_project/LEF
+lappend search_path /home/ICer/logic_project/Tech
+lappend search_path /home/ICer/logic_project/GDS
+lappend search_path /home/ICer/logic_project/LIB
+lappend search_path /home/ICer/logic_project/syn/syn_results
+lappend search_path /home/ICer/logic_project/syn/syn_scripts
+############################################################################
+#%%%%%%%%%%%%Create_libs%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+############################################################################
+create_lib -technology astroTechFile.tf -ref_libs "saed90nm_typ.ndm" I2C
+set_ref_libs -add library_manager/I2C_physical_only.ndm
+read_verilog netlist.v
+link_block -force
+get_libs
+############################################################################
+############################################################################
+############################################################################
+set_working_design_stack I2C:CTS.design
+set_working_design_stack I2C:i2c_master_top.design
+source ./scripts/floor_plane.tcl
+gui_zoom -window [gui_get_current_window -view] -full
+source ./scripts/initial_placement.tcl
+source ./scripts/Power.tcl
+source ./scripts/cell_placement.tcl
+set_working_design_stack I2C:CTS.design
+set_working_design_stack I2C:i2c_master_top.design
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_zoom -window [gui_get_current_window -view] -full
+source ./scripts/Routing.tcl
+source ./scripts/chip_finishing.tcl
+set STD_FILLERS " SHFILL128 SHFILL64 SHFILL1 "
+create_stdcell_filler -lib_cells $STD_FILLERS
+connect_pg_net -automatic
+save_block -as routing_with_filler
+create_stdcell_filler -lib_cells {SHFILL128 SHFILL64 SHFILL1}
+get_cell SH*
+get_cells SHILL128
+get_cell */SHILL128
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {cellDensityMap} -show {true}
+win_select_objects -slct_targets global -at {51.760 103.520} -radius 0.225
+win_select_objects -slct_targets global -at {16.205 113.650} -radius 0.225
+change_selection 
+win_select_objects -within {{-28.130 -0.225} {176.435 174.410}} -slct_targets global -slct_targets_operation clear
+gui_set_map_option -map {cellDensityMap} -option {area_type} -value {Reset}
+gui_set_map_option -map {cellDensityMap} -option {area_type} -value {WholeDesign}
+change_selection 
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {channelCongestionMap} -show {true}
+gui_set_map_option -map {channelCongestionMap} -option {rule_level} -value {hard}
+gui_set_map_option -map {channelCongestionMap} -option {layers} -value {M2 M3 M4 M5 M6 M7 M8 M9}
+create_channel_congestion_map
+create_channel_congestion_map
+win_select_objects -within {{-12.825 -9.675} {167.210 149.205}} -slct_targets global -slct_targets_operation clear
+create_channel_congestion_map -boundary { {0.000 0.000} {-0.000 0.000} {-0.000 -0.000} {0.000 -0.000} }
+gui_set_map_option -map {channelCongestionMap} -option {layers} -value {M1 M2 M3 M4 M5 M6 M7 M8 M9}
+create_channel_congestion_map -boundary { {0.000 0.000} {-0.000 0.000} {-0.000 -0.000} {0.000 -0.000} }
+change_selection 
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {globalCongestionMap} -show {true}
+gui_set_map_option -map {globalCongestionMap} -option {rule_level} -value {hard}
+gui_set_map_option -map {globalCongestionMap} -option {layers} -value {M2 M3 M4 M5 M6 M7 M8 M9}
+report_congestion -rerun_global_router
+win_select_objects -within {{-12.375 -20.250} {172.835 148.305}} -slct_targets global -slct_targets_operation clear
+report_congestion -rerun_global_router
+change_selection 
+gui_set_bucket_option -map {globalCongestionMap} -bucket {Blocked} -option {visible} -value {true}
+gui_set_bucket_option -map {globalCongestionMap} -bucket {Bucket9} -option {visible} -value {true}
+gui_set_bucket_option -map {globalCongestionMap} -bucket {Bucket8} -option {visible} -value {true}
+report_congestion -rerun_global_router
+gui_set_map_option -map {globalCongestionMap} -option {hierarchical} -value {false}
+report_congestion -rerun_global_router
+gui_set_bucket_option -map {globalCongestionMap} -bucket {Blocked} -option {visible} -value {false}
+gui_set_bucket_option -map {globalCongestionMap} -bucket {Bucket9} -option {visible} -value {false}

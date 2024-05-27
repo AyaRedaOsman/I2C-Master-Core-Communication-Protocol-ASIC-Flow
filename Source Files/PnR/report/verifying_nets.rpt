@@ -1,0 +1,33 @@
+Info: verify_pg_nets will be obsolete. Please use check_pg_connectivity.
+Loading cell instances...
+Number of Standard Cells: 644
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of GVDD Wires: 41
+Number of GVDD Vias: 922
+Number of GVDD Terminals: 0
+Number of GVSS Wires: 66
+Number of GVSS Vias: 770
+Number of GVSS Terminals: 2
+**************Verify net GVDD connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+**************Verify net GVSS connectivity*****************
+  Number of floating wires: 35
+  Number of floating vias: 10
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 2
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+{PATH_13_1601 PATH_14_245 PATH_15_46 PATH_16_5 PATH_18_3 PATH_19_3 PATH_18_2 PATH_18_24 PATH_18_21 PATH_18_16 PATH_18_13 PATH_18_8 PATH_19_2 PATH_19_26 PATH_19_23 PATH_19_18 PATH_19_15 PATH_19_10 PATH_19_6 PATH_18_6 PATH_19_24 PATH_19_21 PATH_19_16 PATH_19_13 PATH_19_8 PATH_19_7 PATH_18_26 PATH_18_23 PATH_18_18 PATH_18_15 PATH_18_10 PATH_18_7 PATH_17_2 PATH_14_244 PATH_13_1600 VIA_SA_4 VIA_SA_5 VIA_SA_6 VIA_SA_7 VIA_S_4819 VIA_S_4820 VIA_S_4847 VIA_S_4848 VIA_S_4849 VIA_S_4850}

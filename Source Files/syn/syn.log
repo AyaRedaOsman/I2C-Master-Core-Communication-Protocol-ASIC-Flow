@@ -1,0 +1,975 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################                             
+set top_module i2c_master_top
+i2c_master_top
+#################        Adding search path              ##################
+lappend search_path /home/ICer/logic_project/DB
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/logic_project/DB
+lappend search_path /home/ICer/logic_project/RTL
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver /home/ICer/logic_project/DB /home/ICer/logic_project/RTL
+##################### Define Working Library Directory ######################
+sh rm -rf work
+sh mkdir -p work
+define_design_lib work -path ./work
+1
+################## Design Compiler Library Files #setup ######################
+puts "#      #setting Design Libraries          #"
+#      #setting Design Libraries          #
+## Standard Cell libraries 
+set link_library "* saed90nm_typ.db"
+* saed90nm_typ.db
+## Standard Cell libraries 
+set target_library "saed90nm_typ.db"
+saed90nm_typ.db
+######################## Reading RTL Files #################################
+puts "#             Reading RTL Files           #"
+#             Reading RTL Files           #
+source ./syn_scripts/reading.tcl 
+#             Reading RTL Files           #
+Running PRESTO HDLC
+Compiling source file /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v
+Opening include file /home/ICer/logic_project/RTL/i2c_master_defines.v
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:196: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:214: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:223: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:224: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:228: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:229: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:241: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:245: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:246: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:285: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:286: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:288: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:289: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:293: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:294: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:296: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:297: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:301: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:302: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:304: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:305: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:315: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:316: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:320: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:321: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:325: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:326: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:332: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:333: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:334: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:344: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:346: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:348: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:352: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:354: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:356: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:361: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:389: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:390: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:391: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:392: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:393: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:397: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:398: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:399: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:400: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:401: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:405: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:413: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:414: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:415: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:416: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:417: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:420: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:421: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:422: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:428: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:429: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:430: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:431: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:436: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:437: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:438: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:439: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:444: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:445: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:446: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:447: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:452: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:453: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:454: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:455: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:460: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:461: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:462: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:463: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:464: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:470: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:471: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:472: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:473: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:478: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:479: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:480: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:481: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:486: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:487: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:488: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:489: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:494: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:495: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:496: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:497: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:498: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:504: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:505: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:506: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:507: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:512: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:513: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:514: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:515: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:520: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:521: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:522: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:523: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:528: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:529: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:530: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:531: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:532: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:538: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:539: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:540: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:541: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:546: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:547: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:548: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:549: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:555: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:556: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:557: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:558: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:563: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:564: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:565: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:566: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:567: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Presto compilation completed successfully.
+Loading db file '/home/ICer/logic_project/DB/saed90nm_typ.db'
+Running PRESTO HDLC
+Compiling source file /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v
+Opening include file /home/ICer/logic_project/RTL/i2c_master_defines.v
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:178: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:180: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:182: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:184: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:189: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:191: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:193: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:195: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:207: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:208: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:209: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:210: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:211: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:212: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:217: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:220: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:221: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:222: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:223: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:228: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:229: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:230: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:231: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:239: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:244: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:245: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:249: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:250: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:254: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:255: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:258: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:266: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:267: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:271: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:272: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:275: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:282: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:283: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:287: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:288: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:289: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:297: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:298: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:302: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:303: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:306: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:307: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:315: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:316: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:320: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:321: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:324: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:328: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:330: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:333: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:338: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:339: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:342: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file /home/ICer/logic_project/RTL/i2c_master_defines.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file /home/ICer/logic_project/RTL/i2c_master_top.v
+Opening include file /home/ICer/logic_project/RTL/i2c_master_defines.v
+Opening include file /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v
+Opening include file /home/ICer/logic_project/RTL/i2c_master_defines.v
+Opening include file /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v
+Opening include file /home/ICer/logic_project/RTL/i2c_master_defines.v
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:196: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:214: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:223: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:224: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:228: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:229: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:241: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:245: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:246: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:285: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:286: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:288: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:289: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:293: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:294: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:296: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:297: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:301: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:302: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:304: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:305: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:315: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:316: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:320: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:321: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:325: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:326: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:332: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:333: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:334: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:344: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:346: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:348: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:352: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:354: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:356: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:361: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:389: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:390: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:391: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:392: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:393: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:397: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:398: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:399: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:400: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:401: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:405: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:413: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:414: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:415: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:416: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:417: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:420: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:421: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:422: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:428: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:429: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:430: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:431: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:436: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:437: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:438: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:439: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:444: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:445: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:446: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:447: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:452: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:453: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:454: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:455: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:460: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:461: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:462: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:463: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:464: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:470: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:471: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:472: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:473: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:478: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:479: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:480: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:481: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:486: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:487: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:488: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:489: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:494: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:495: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:496: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:497: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:498: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:504: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:505: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:506: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:507: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:512: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:513: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:514: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:515: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:520: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:521: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:522: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:523: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:528: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:529: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:530: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:531: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:532: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:538: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:539: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:540: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:541: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:546: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:547: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:548: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:549: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:555: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:556: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:557: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:558: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:563: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:564: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:565: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:566: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:567: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:178: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:180: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:182: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:184: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:189: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:191: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:193: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:195: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:207: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:208: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:209: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:210: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:211: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:212: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:217: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:219: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:220: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:221: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:222: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:223: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:228: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:229: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:230: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:231: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:239: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:240: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:244: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:245: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:249: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:250: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:254: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:255: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:258: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:266: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:267: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:271: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:272: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:275: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:282: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:283: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:287: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:288: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:289: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:297: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:298: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:302: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:303: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:306: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:307: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:315: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:316: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:320: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:321: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:324: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:328: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:330: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:333: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:338: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:339: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:342: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:163: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:169: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:170: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:171: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:172: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:173: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:174: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:175: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:176: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:184: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:185: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:186: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:190: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:191: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:192: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:197: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:198: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:199: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:200: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:207: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:209: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:213: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:218: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:220: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:221: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:269: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:270: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:271: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:272: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:276: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:277: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:278: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:279: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:283: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:284: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:285: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:286: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:292: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:294: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_top.v:296: Intraassignment delays for nonblocking assignments are ignored. (VER-130)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file /home/ICer/logic_project/RTL/timescale.v
+Presto compilation completed successfully.
+1
+elaborate -lib work $top_module
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_typ'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 166 in file
+	'/home/ICer/logic_project/RTL/i2c_master_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           168            |    auto/user     |
+===============================================
+
+Statistics for case statements in always block at line 181 in file
+	'/home/ICer/logic_project/RTL/i2c_master_top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           196            |    auto/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 162 in file
+		'/home/ICer/logic_project/RTL/i2c_master_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wb_ack_o_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 166 in file
+		'/home/ICer/logic_project/RTL/i2c_master_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wb_dat_o_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 181 in file
+		'/home/ICer/logic_project/RTL/i2c_master_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       txr_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      prer_reg       | Flip-flop |  16   |  Y  | N  | N  | Y  | N  | N  | N  |
+|       ctr_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 205 in file
+		'/home/ICer/logic_project/RTL/i2c_master_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cr_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 266 in file
+		'/home/ICer/logic_project/RTL/i2c_master_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    irq_flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       al_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      rxack_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       tip_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_top line 290 in file
+		'/home/ICer/logic_project/RTL/i2c_master_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    wb_inta_o_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'i2c_master_top'.
+Information: Building the design 'i2c_master_byte_ctrl'. (HDL-193)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v:233: Case statement is not a full case. (ELAB-909)
+
+Statistics for case statements in always block at line 204 in file
+	'/home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           233            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine i2c_master_byte_ctrl line 176 in file
+		'/home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       sr_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_byte_ctrl line 187 in file
+		'/home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dcnt_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_byte_ctrl line 204 in file
+		'/home/ICer/logic_project/RTL/i2c_master_byte_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     ack_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    core_cmd_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    core_txd_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      shift_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       ld_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     cmd_ack_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     c_state_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'i2c_master_bit_ctrl'. (HDL-193)
+Warning:  /home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v:408: Case statement is not a full case. (ELAB-909)
+
+Statistics for case statements in always block at line 386 in file
+	'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           408            |    user/user     |
+|           412            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 195 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    dscl_oen_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 200 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   slave_wait_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 210 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     clk_en_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       cnt_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 237 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      cSDA_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      cSCL_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 256 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   filter_cnt_reg    | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 263 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      fSDA_reg       | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      fSCL_reg       | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 282 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dSDA_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      sSCL_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      sSDA_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|      dSCL_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 312 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  sto_condition_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  sta_condition_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 331 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      busy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 342 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cmd_stop_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 350 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       al_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 360 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dout_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine i2c_master_bit_ctrl line 386 in file
+		'/home/ICer/logic_project/RTL/i2c_master_bit_ctrl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sda_chk_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     c_state_reg     | Flip-flop |  18   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     cmd_ack_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     scl_oen_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     sda_oen_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+###################### Defining toplevel ###################################
+current_design $top_module
+Current design is 'i2c_master_top'.
+{i2c_master_top}
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+redirect -tee ./log/link.rpt {link}
+
+  Linking design 'i2c_master_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /home/ICer/logic_project/syn/i2c_master_top.db, etc
+  saed90nm_typ (library)      /home/ICer/logic_project/DB/saed90nm_typ.db
+
+1
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+redirect -tee ./log/check_design.rpt check_design
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Mon May 20 01:40:47 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      5
+    Unconnected ports (LINT-28)                                     2
+    Shorted outputs (LINT-31)                                       1
+    Constant outputs (LINT-52)                                      2
+
+Cells                                                               3
+    Cells do not drive (LINT-1)                                     3
+--------------------------------------------------------------------------------
+
+Warning: In design 'i2c_master_byte_ctrl', cell 'C474' does not drive any nets. (LINT-1)
+Warning: In design 'i2c_master_bit_ctrl', cell 'C688' does not drive any nets. (LINT-1)
+Warning: In design 'i2c_master_bit_ctrl', cell 'C714' does not drive any nets. (LINT-1)
+Warning: In design 'i2c_master_bit_ctrl', port 'VDD' is not connected to any nets. (LINT-28)
+Warning: In design 'i2c_master_bit_ctrl', port 'VSS' is not connected to any nets. (LINT-28)
+Warning: In design 'i2c_master_bit_ctrl', output port 'scl_o' is connected directly to output port 'sda_o'. (LINT-31)
+Warning: In design 'i2c_master_bit_ctrl', output port 'scl_o' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'i2c_master_bit_ctrl', output port 'sda_o' is connected directly to 'logic 0'. (LINT-52)
+1
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+source ./syn_scripts/constrains.tcl 
+Warning: In the design i2c_master_bit_ctrl, net '*Logic0*' is connecting multiple ports. (UCN-1)
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+Warning: In the design i2c_master_bit_ctrl, net '*Logic0*' is connecting multiple ports. (UCN-1)
+Warning: Can't find port 'clk' in design 'i2c_master_top'. (UID-95)
+Warning: Can't find port 'clk' in design 'i2c_master_top'. (UID-95)
+1
+###################### Mapping and optimization ########################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'i2c_master_bit_ctrl'
+Information: The register 'c_state_reg_17_' is a constant and will be removed. (OPT-1206)
+  Processing 'i2c_master_byte_ctrl'
+  Processing 'i2c_master_top'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'i2c_master_bit_ctrl_DW01_dec_0'
+  Processing 'i2c_master_bit_ctrl_DW01_dec_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    9348.7      0.00       0.0       0.0                          
+    0:00:04    9348.7      0.00       0.0       0.0                          
+    0:00:04    9348.7      0.00       0.0       0.0                          
+    0:00:04    9348.7      0.00       0.0       0.0                          
+    0:00:04    9348.7      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8858.4      0.00       0.0       0.0                          
+    0:00:04    8758.9      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    8758.9      0.00       0.0       0.0                          
+    0:00:04    8758.9      0.00       0.0       0.0                          
+    0:00:04    8687.0      0.00       0.0       0.0                          
+    0:00:04    8648.3      0.00       0.0       0.0                          
+    0:00:04    8620.6      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:04    8615.1      0.00       0.0       0.0                          
+    0:00:05    8598.5      0.00       0.0       0.0                          
+    0:00:05    8598.5      0.00       0.0       0.0                          
+    0:00:05    8598.5      0.00       0.0       0.0                          
+    0:00:05    8598.5      0.00       0.0       0.0                          
+    0:00:05    8598.5      0.00       0.0       0.0                          
+    0:00:05    8598.5      0.00       0.0       0.0                          
+    0:00:05    8598.5      0.00       0.0       0.0                          
+Loading db file '/home/ICer/logic_project/DB/saed90nm_typ.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+set_svf -off
+1
+# Write out files
+write_sdf  ./syn_results/sdf.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/ICer/logic_project/syn/syn_results/sdf.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+write_sdc  -nosplit ./syn_results/sdc.sdc
+1
+report_area -nosplit -hierarchy > ./syn_results/syn_reports/area.rpt
+report_power -nosplit -hierarchy > ./syn_results/syn_reports/power.rpt
+report_timing -nosplit -delay_type min -max_paths 100 -nets -capacitance -input_pins -transition_time > ./syn_results/syn_reports/hold.rpt
+report_timing -nosplit -delay_type max -max_paths 100 -nets -capacitance -input_pins -transition_time > ./syn_results/syn_reports/setup.rpt
+report_clock -attributes > ./syn_results/syn_reports/clocks.rpt
+report_constraint -all_violators -nosplit > ./syn_results/syn_reports/violated_constraints.rpt
+report_qor > ./syn_results/syn_reports/synth_qor.rpt
+report_cell > ./syn_results/syn_reports/synth_cells.rpt
+report_resources > ./syn_results/syn_reports/synth_resources.rpt
+define_name_rules no_case -case_insensitive
+1
+change_names -rule no_case -hierarchy
+Warning: In the design i2c_master_top, net 'sda_pad_o' is connecting multiple ports. (UCN-1)
+Warning: In the design i2c_master_bit_ctrl, net 'scl_o' is connecting multiple ports. (UCN-1)
+1
+change_names -rule verilog -hierarchy
+Warning: In the design i2c_master_top, net 'sda_pad_o' is connecting multiple ports. (UCN-1)
+Warning: In the design i2c_master_bit_ctrl, net 'scl_o' is connecting multiple ports. (UCN-1)
+1
+set verilogout_no_tri true
+true
+set verilogout_equation false
+false
+write_file -f ddc -hierarchy -output ./syn_results/ddc.ddc
+Writing ddc file './syn_results/ddc.ddc'.
+1
+write_file -format verilog -hierarchy -output ./syn_results/netlist.v
+Writing verilog file '/home/ICer/logic_project/syn/syn_results/netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+gui_start
+Current design is 'i2c_master_top'.
+4.1
+4.1
+dc_shell> dc_shell> Current design is 'i2c_master_top'.
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/generic.sdb'

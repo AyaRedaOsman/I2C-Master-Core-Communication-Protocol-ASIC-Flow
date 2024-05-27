@@ -1,0 +1,2039 @@
+
+icc2_shell> open_block /home/ICer/logic_project/PnR/I2C:CTS.design
+Information: User units loaded from library 'saed90nm_typ' (LNK-040)
+Opening block 'I2C:CTS.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+Variable f is defined in -parameters option but not used by any pattern expression.
+Warning: Some defined variables in -parameters option are not used by other options. (PGR-501)
+Begin building search trees for block I2C:CTS.design
+Done building search trees for block I2C:CTS.design (time 0s)
+icc2_shell> link_block
+Using libraries: I2C saed90nm_typ I2C_physical_only
+Warning: In library I2C, no block views exist for block i2c_master_top. (LNK-064)
+Visiting block I2C:CTS.design
+Design 'i2c_master_top' was successfully linked.
+1
+icc2_shell> source ./scripts/Routing.tcl
+Information: Saving 'I2C:CTS.design' to 'I2C:routing.design'. (DES-028)
+icc2_shell> source ./scripts/checks.tcl
+icc2_shell> source ./scripts/chip_finishing.tcl
+Warning: Nothing implicitly matched 'SHFILL128' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL64' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL1' (SEL-003)
+Error: Nothing matched for -lib_cells (SEL-005)
+Error: bad value specified for option -lib_cells
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ICer/logic_project/PnR/scripts/chip_finishing.tcl'
+        stopped at line 5 due to error. (CMD-081)
+Extended error info:
+bad value specified for option -lib_cells
+    while executing
+"create_stdcell_filler -lib_cell $STD_FILLERS"
+ -- End Extended Error Info
+icc2_shell> set STD_FILLERS " SHFILL128 SHFILL64 SHFILL1 "
+ SHFILL128 SHFILL64 SHFILL1 
+icc2_shell> create_stdcell_filler -lib_cell $STD_FILLERS
+Warning: Nothing implicitly matched 'SHFILL128' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL64' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL1' (SEL-003)
+Error: Nothing matched for -lib_cells (SEL-005)
+Error: bad value specified for option -lib_cells
+        Use error_info for more info. (CMD-013)
+icc2_shell> connect_pg_net -automatic
+icc2_shell> save_block -as routing_with_filler
+Information: Saving 'I2C:CTS.design' to 'I2C:routing_with_filler.design'. (DES-028)
+1
+icc2_shell> #####################################
+icc2_shell> source ./scripts/checks.tcl
+icc2_shell> lappend search_path /home/ICer/logic_project/GDS
+. /home/ICer/logic_project/GDS
+icc2_shell> lappend search_path /home/ICer/logic_project/LIB
+. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB
+icc2_shell> source ./scripts/Output.tcl
+Error: Unable to open file './output/I2C_top_for_pt_v.v' for writing; . (FILE-003)
+Error: problem in write_verilog command
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ICer/logic_project/PnR/scripts/Output.tcl'
+        stopped at line 7 due to error. (CMD-081)
+Extended error info:
+problem in write_verilog command
+    while executing
+"write_verilog  ./output/${DESIGN_NAME}_for_pt_v.v"
+ -- End Extended Error Info
+icc2_shell> source ./scripts/Output.tcl
+Information: Design CTS has 746 nets, 0 global routed, 744 detail routed. (NEX-024)
+NEX: extract design i2c_master_top
+Information: The RC mode used is DR for design 'i2c_master_top'. (NEX-022)
+---extraction options---
+Corner: default
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.incremental_extraction : true
+ extract.enable_coupling_cap    : false
+Extracting design: CTS 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 744 nets are successfully extracted. (NEX-028)
+Information: batch extract takes 0.23 seconds, elapse 0.23 seconds (NEX-015)
+NEX: write corner ID 0 parasitics to ./output/I2C_top.out.spef.worst_25.spef 
+spefName ./output/I2C_top.out.spef.worst_25.spef, corner name default 
+NEX: write corner ID 1 parasitics to ./output/I2C_top.out.spef.best_25.spef 
+spefName ./output/I2C_top.out.spef.best_25.spef, corner name default 
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:CTS.design'. (TIM-125)
+Error: File '/home/ICer/logic_project/PnR/saed90nm.gdsout.map' cannot be found using search_path of: '. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB .'. (FILE-002)
+Error: Unable to open file '/home/ICer/logic_project/PnR/saed90nm.gdsout.map' for reading; Gds layer map file read problem (FILE-001)
+Error: problem in write_gds
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ICer/logic_project/PnR/scripts/Output.tcl'
+        stopped at line 28 due to error. (CMD-081)
+Extended error info:
+problem in write_gds
+    while executing
+"write_gds -view design -lib_cell_view frame -output_pin all -fill include -exclude_empty_block -long_names -layer_map "$GDS_MAP_FILE" -keep_data_type ..."
+ -- End Extended Error Info
+icc2_shell> source ./scripts/Output.tcl
+Information: Design CTS has 746 nets, 0 global routed, 744 detail routed. (NEX-024)
+NEX: extract design i2c_master_top
+Information: batch extract takes 0.00 seconds, elapse 0.00 seconds (NEX-015)
+NEX: write corner ID 0 parasitics to ./output/I2C_top.out.spef.worst_25.spef 
+spefName ./output/I2C_top.out.spef.worst_25.spef, corner name default 
+NEX: write corner ID 1 parasitics to ./output/I2C_top.out.spef.best_25.spef 
+spefName ./output/I2C_top.out.spef.best_25.spef, corner name default 
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:CTS.design'. (TIM-125)
+Error: File '/home/ICer/logic_project/PnR/saed90nm.gdsout.map' cannot be found using search_path of: '. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS .'. (FILE-002)
+Error: Unable to open file '/home/ICer/logic_project/PnR/saed90nm.gdsout.map' for reading; Gds layer map file read problem (FILE-001)
+Error: problem in write_gds
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ICer/logic_project/PnR/scripts/Output.tcl'
+        stopped at line 29 due to error. (CMD-081)
+Extended error info:
+problem in write_gds
+    while executing
+"write_gds -view design -lib_cell_view frame -output_pin all -fill include -exclude_empty_block -long_names -layer_map "$GDS_MAP_FILE" -keep_data_type ..."
+ -- End Extended Error Info
+icc2_shell> source ./scripts/Output.tcl
+Information: Design CTS has 746 nets, 0 global routed, 744 detail routed. (NEX-024)
+NEX: extract design i2c_master_top
+Information: batch extract takes 0.00 seconds, elapse 0.00 seconds (NEX-015)
+NEX: write corner ID 0 parasitics to ./output/I2C_top.out.spef.worst_25.spef 
+spefName ./output/I2C_top.out.spef.worst_25.spef, corner name default 
+NEX: write corner ID 1 parasitics to ./output/I2C_top.out.spef.best_25.spef 
+spefName ./output/I2C_top.out.spef.best_25.spef, corner name default 
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:CTS.design'. (TIM-125)
+Error: File '/home/ICer/logic_project/PnR/saed90nm.gdsout.map' cannot be found using search_path of: '. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS /home/ICer/logic_project/GDS .'. (FILE-002)
+Error: Unable to open file '/home/ICer/logic_project/PnR/saed90nm.gdsout.map' for reading; Gds layer map file read problem (FILE-001)
+Error: problem in write_gds
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ICer/logic_project/PnR/scripts/Output.tcl'
+        stopped at line 29 due to error. (CMD-081)
+Extended error info:
+problem in write_gds
+    while executing
+"write_gds -view design -lib_cell_view frame -output_pin all -fill include -exclude_empty_block -long_names -layer_map "$GDS_MAP_FILE" -keep_data_type ..."
+ -- End Extended Error Info
+icc2_shell> source ./scripts/Output.tcl
+Information: Design CTS has 746 nets, 0 global routed, 744 detail routed. (NEX-024)
+NEX: extract design i2c_master_top
+Information: batch extract takes 0.00 seconds, elapse 0.00 seconds (NEX-015)
+NEX: write corner ID 0 parasitics to ./output/I2C_top.out.spef.worst_25.spef 
+spefName ./output/I2C_top.out.spef.worst_25.spef, corner name default 
+NEX: write corner ID 1 parasitics to ./output/I2C_top.out.spef.best_25.spef 
+spefName ./output/I2C_top.out.spef.best_25.spef, corner name default 
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:CTS.design'. (TIM-125)
+Merging stream files...
+Finished scanning stream file '/home/ICer/logic_project/GDS/saed90nm.gds'...
+blockage_as_zero_spacing  false
+0 1:*:-1:-1:0  1:*
+0 2:*:-1:-1:0  2:*
+0 3:*:-1:-1:0  3:*
+0 4:*:-1:-1:0  4:*
+0 5:*:-1:-1:0  5:*
+0 6:*:-1:-1:0  6:*
+0 7:*:-1:-1:0  7:*
+0 8:*:-1:-1:0  8:*
+0 9:*:-1:-1:0  9:*
+0 10:*:-1:-1:0  10:*
+0 29:*:-1:-1:0  29:*
+0 30:*:-1:-1:0  30:*
+1 11:*:-1:-1:0  11:*
+1 12:*:-1:-1:0  12:*
+1 13:*:-1:-1:0  13:*
+1 14:*:-1:-1:0  14:*
+1 15:*:-1:-1:0  15:*
+1 16:*:-1:-1:0  16:*
+1 17:*:-1:-1:0  17:*
+1 18:*:-1:-1:0  18:*
+1 19:*:-1:-1:0  19:*
+0 20:*:-1:-1:0  20:*
+0 21:*:-1:-1:0  21:*
+0 22:*:-1:-1:0  22:*
+0 23:*:-1:-1:0  23:*
+0 24:*:-1:-1:0  24:*
+0 25:*:-1:-1:0  25:*
+0 26:*:-1:-1:0  26:*
+0 27:*:-1:-1:0  27:*
+0 28:*:-1:-1:0  28:*
+0 31:*:-1:-1:0  31:*
+0 32:*:-1:-1:0  32:*
+0 33:*:-1:-1:0  33:*
+0 34:*:-1:-1:0  34:*
+0 35:*:-1:-1:0  35:*
+0 36:*:-1:-1:0  36:*
+0 37:*:-1:-1:0  37:*
+0 38:*:-1:-1:0  38:*
+0 39:*:-1:-1:0  39:*
+2 11:*:-1:-1:0  31:*
+2 12:*:-1:-1:0  32:*
+2 13:*:-1:-1:0  33:*
+2 14:*:-1:-1:0  34:*
+2 15:*:-1:-1:0  35:*
+2 16:*:-1:-1:0  36:*
+2 17:*:-1:-1:0  37:*
+2 18:*:-1:-1:0  38:*
+2 19:*:-1:-1:0  39:*
+0 3:1:-1:-1:0  3:1
+0 10:1:-1:-1:0  10:1
+0 11:1:-1:-1:0  11:1
+0 12:1:-1:-1:0  12:1
+0 13:1:-1:-1:0  13:1
+0 14:1:-1:-1:0  14:1
+0 15:1:-1:-1:0  15:1
+0 16:1:-1:-1:0  16:1
+0 17:1:-1:-1:0  17:1
+0 18:1:-1:-1:0  18:1
+0 19:1:-1:-1:0  19:1
+0 61:*:-1:-1:0  61:*
+0 62:*:-1:-1:0  62:*
+0 63:*:-1:-1:0  63:*
+0 64:*:-1:-1:0  64:*
+0 65:*:-1:-1:0  65:*
+0 66:*:-1:-1:0  66:*
+0 67:*:-1:-1:0  67:*
+0 68:*:-1:-1:0  68:*
+0 69:*:-1:-1:0  69:*
+0 45:*:-1:-1:0  45:*
+0 46:*:-1:-1:0  46:*
+0 47:*:-1:-1:0  47:*
+0 51:*:-1:-1:0  51:*
+0 52:*:-1:-1:0  52:*
+0 53:*:-1:-1:0  53:*
+0 54:*:-1:-1:0  54:*
+0 55:*:-1:-1:0  55:*
+0 56:*:-1:-1:0  56:*
+0 57:*:-1:-1:0  57:*
+0 58:*:-1:-1:0  58:*
+0 59:*:-1:-1:0  59:*
+0 41:*:-1:-1:0  41:*
+0 43:*:-1:-1:0  43:*
+0 44:*:-1:-1:0  44:*
+0 48:*:-1:-1:0  48:*
+0 49:*:-1:-1:0  49:*
+0 50:*:-1:-1:0  50:*
+
+
+Merging stream files...
+Finished scanning stream file '/home/ICer/logic_project/PnR/output/I2C_top.gds.strm_out'...
+Merge stream file finished with 360 cells 
+Information: Saving 'I2C:CTS.design' to 'I2C:final.design'. (DES-028)
+icc2_shell> ############################################################################
+icc2_shell> #%%%%%%%%%%%%%%%%%%%%%%%%%%%create_log%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+icc2_shell> ############################################################################
+icc2_shell> #icc2_shell -f ./scripts/Design_setup.tcl | tee syn.log
+icc2_shell> gui_start
+icc2_shell> ############################################################################
+icc2_shell> #%%%%%%%%%%%design_Setup%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+icc2_shell> ############################################################################
+icc2_shell> lappend search_path /home/ICer/logic_project/PnR/library_manager
+. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS /home/ICer/logic_project/GDS /home/ICer/logic_project/PnR/library_manager
+icc2_shell> lappend search_path /home/ICer/logic_project/LEF
+. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS /home/ICer/logic_project/GDS /home/ICer/logic_project/PnR/library_manager /home/ICer/logic_project/LEF
+icc2_shell> lappend search_path /home/ICer/logic_project/Tech
+. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS /home/ICer/logic_project/GDS /home/ICer/logic_project/PnR/library_manager /home/ICer/logic_project/LEF /home/ICer/logic_project/Tech
+icc2_shell> lappend search_path /home/ICer/logic_project/GDS
+. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS /home/ICer/logic_project/GDS /home/ICer/logic_project/PnR/library_manager /home/ICer/logic_project/LEF /home/ICer/logic_project/Tech /home/ICer/logic_project/GDS
+icc2_shell> lappend search_path /home/ICer/logic_project/LIB
+. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS /home/ICer/logic_project/GDS /home/ICer/logic_project/PnR/library_manager /home/ICer/logic_project/LEF /home/ICer/logic_project/Tech /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB
+icc2_shell> lappend search_path /home/ICer/logic_project/syn/syn_results
+. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS /home/ICer/logic_project/GDS /home/ICer/logic_project/PnR/library_manager /home/ICer/logic_project/LEF /home/ICer/logic_project/Tech /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/syn/syn_results
+icc2_shell> lappend search_path /home/ICer/logic_project/syn/syn_scripts
+. /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/GDS /home/ICer/logic_project/GDS /home/ICer/logic_project/PnR/library_manager /home/ICer/logic_project/LEF /home/ICer/logic_project/Tech /home/ICer/logic_project/GDS /home/ICer/logic_project/LIB /home/ICer/logic_project/syn/syn_results /home/ICer/logic_project/syn/syn_scripts
+icc2_shell> ############################################################################
+icc2_shell> #%%%%%%%%%%%%Create_libs%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+icc2_shell> ############################################################################
+icc2_shell> create_lib -technology astroTechFile.tf -ref_libs "saed90nm_typ.ndm" I2C
+Error: Library directory '/home/ICer/logic_project/PnR/I2C' already exists (LIB-009)
+Error: problem in create_lib
+        Use error_info for more info. (CMD-013)
+icc2_shell> set_ref_libs -add library_manager/I2C_physical_only.ndm
+Error: Reference library name I2C_physical_only.ndm in library path library_manager/I2C_physical_only.ndm has the same name as path library_manager/I2C_physical_only.ndm. (LIB-003)
+Error: problem in set_ref_libs
+        Use error_info for more info. (CMD-013)
+icc2_shell> read_verilog netlist.v
+Loading verilog file '/home/ICer/logic_project/syn/syn_results/netlist.v'
+Information: Reading Verilog into new design 'i2c_master_top' in library 'I2C'. (VR-012)
+Number of modules read: 5
+Top level ports: 35
+Total ports in all modules: 185
+Total nets in all modules: 829
+Total instances in all modules: 579
+Elapsed = 00:00:09.33, CPU = 00:00:08.48
+1
+icc2_shell> link_block -force
+Using libraries: I2C saed90nm_typ I2C_physical_only
+Linking block I2C:i2c_master_top.design
+Design 'i2c_master_top' was successfully linked.
+Begin building search trees for block I2C:i2c_master_top.design
+Done building search trees for block I2C:i2c_master_top.design (time 0s)
+1
+icc2_shell> get_libs
+{I2C saed90nm_typ I2C_physical_only}
+icc2_shell> ############################################################################
+icc2_shell> ############################################################################
+icc2_shell> ############################################################################
+icc2_shell> set_working_design_stack I2C:CTS.design
+icc2_shell> set_working_design_stack I2C:i2c_master_top.design
+icc2_shell> source ./scripts/floor_plane.tcl
+Information: The design specific attribute override for layer 'M1' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M2' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M3' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M4' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M5' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M6' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M7' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M8' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M9' is set in the current block 'i2c_master_top', because the actual library setting may not be overwritten. (ATTR-12)
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 60.85%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Warning: Count value is not specified. Covering the bounding box of track, depending on its space value. (NDMUI-136)
+Warning: Coordinate value is not specified. Using coordinate that is half of the space distance inside of the die area. (NDMUI-122)
+Warning: Space is not specified. Using pitch. (NDMUI-124)
+Information: Overwriting block 'floorplanning.design' in library 'I2C'. (DES-025)
+icc2_shell> source ./scripts/initial_placement.tcl
+Information: The net parasitics of block i2c_master_top are cleared. (TIM-123)
+ Information: Using name rules 'no_case'.
+ Information: no objects changed in design 'i2c_master_top'.
+ Information: Using name rules 'verilog'.
+ Information: no objects changed in design 'i2c_master_top'.
+Setting dont_touch_network on clock 'clk'
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+************************************************************
+Warning: No port objects matched 'clk' (SEL-004)
+Error: Nothing matched for collection (SEL-005)
+Warning: No port objects matched 'clk' (SEL-004)
+Error: Nothing matched for collection (SEL-005)
+--------------
+running create_placement
+Warning: The -congestion_effort option only effects the standard cell congestion reduction, which is not enabled in this run. (DPP-221)
+Creating appropriate block views (if needed)...
+Multi-Processing Summary
+  Max number of cores for parent process: 1; hostname: IC_EDA
+  No distributed processing
+Command Option Settings Summary
+  -floorplan -effort medium -congestion -congestion_effort medium
+Information: All hard macros are fixed, no hard macro placement is done. (DPP-416)
+Warning: application option <place.fix_cells_on_soft_blockages> is deprecated and scheduled for removal in a future release. See the man page for this  application option for migration assistance. (NDMUI-441)
+Placing top level std cells.
+coarse place 0% done.
+coarse place 33% done.
+coarse place 67% done.
+coarse place 100% done.
+Running block placement.
+Warning: application option <place.fix_cells_on_soft_blockages> is deprecated and scheduled for removal in a future release. See the man page for this  application option for migration assistance. (NDMUI-441)
+Floorplan placement done.
+****************************************
+Report : report_placement
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 00:59:04 2024
+****************************************
+
+  Wire length report (all)
+  ==================
+  wire length in design i2c_master_top: 15100.432 microns.
+    number of nets with unassigned pins: 33
+  wire length in design i2c_master_top (see through blk pins): 15100.432 microns.
+  ------------------
+  Total wire length: 15100.432 microns.
+
+  Physical hierarchy violations report
+  ====================================
+  Violations in design i2c_master_top:
+     0 cells have placement violation.
+  ------------------------------------
+  Total 0 cells have placement violation.
+
+  Voltage area violations report
+  ====================================
+  Voltage area placement violations in design i2c_master_top:
+     0 cells placed outside the voltage area which they belong to.
+  ------------------------------------
+  Total 0 macro cells placed outside the voltage area which they belong to.
+
+  Hard macro to hard macro overlap report
+  =======================================
+  HM to HM overlaps in design i2c_master_top: 0
+  ---------------------------------------
+  Total hard macro to hard macro overlaps: 0
+
+Information: Default error view i2c_master_top_dpplace.err is created in GUI error browser. (DPP-054)
+Information: Elapsed time for create_placement excluding pending time: 00:00:01.93. (DPUI-902)
+Information: CPU time for create_placement : 00:00:02.01. (DPUI-903)
+Information: Peak memory usage for create_placement : 426 MB. (DPUI-904)
+----------------------------------------------------------------
+running legalize_placement
+nplDplc2Placer::setParam(effort,1)
+nplDplc2Placer::setParam(debug,0)
+nplDplc2Placer::setParam(site_check,2)
+nplDplc2Placer::setParam(app_firm_wgt,0)
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+        place.legalize.enable_prerouted_net_check: 1
+        place.legalize.num_tracks_for_access_check: 1
+        place.legalize.use_eol_spacing_for_access_check: 0
+        place.legalize.allow_touch_track_for_access_check: 1
+        place.legalize.reduce_conservatism_in_eol_check: 0
+        place.legalize.preroute_shape_merge_distance: 0.0
+        place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 0 total shapes.
+Layer M2: cached 0 shapes out of 0 total shapes.
+Cached 0 vias out of 0 total vias.
+
+Legalizing Top Level Design i2c_master_top ... 
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+
+Bounds/Regions In This Design:
+        Area    Num Cells  Exclusive Name
+ (square um)
+     14131.8          575        Yes DEFAULT_VA
+
+Starting legalizer.
+Warning: Exclusive bound 'DEFAULT' has no cells.
+Optimizing Exclusive Bound 'DEFAULT_VA' (2/2)
+    Done Exclusive Bound 'DEFAULT_VA' (2/2) (0 sec)
+Legalization complete (0 total sec)
+
+****************************************
+  Report : Placement Attempts
+  Site   : unit
+****************************************
+
+number of cells:                    575
+number of references:                33
+number of site rows:                 41
+number of locations attempted:    10740
+number of locations failed:           0  (0.0%)
+
+Legality of references at locations:
+0 references had failures.
+
+Legality of references in rows:
+0 references had row failures.
+
+****************************************
+  Report : Cell Displacements
+****************************************
+
+number of cells aggregated:         575 (9330 total sites)
+avg row height over cells:        2.880 um
+rms cell displacement:            1.074 um ( 0.37 row height)
+rms weighted cell displacement:   1.074 um ( 0.37 row height)
+max cell displacement:            2.938 um ( 1.02 row height)
+avg cell displacement:            0.942 um ( 0.33 row height)
+avg weighted cell displacement:   0.942 um ( 0.33 row height)
+number of cells moved:              575
+number of large displacements:        0
+large displacement threshold:     3.000 row height
+
+Displacements of worst 10 cells:
+Cell: U37 (AO22X1)
+  Input location: (32.6329,23.5821)
+  Legal location: (32.6,26.52)
+  Displacement:   2.938 um ( 1.02 row height)
+Cell: byte_controller/bit_controller/U49 (NOR2X0)
+  Input location: (67.2513,112.831)
+  Legal location: (66.84,110.04)
+  Displacement:   2.821 um ( 0.98 row height)
+Cell: U112 (AND3X1)
+  Input location: (15.0014,23.4567)
+  Legal location: (15,20.76)
+  Displacement:   2.697 um ( 0.94 row height)
+Cell: byte_controller/bit_controller/U173 (AO22X1)
+  Input location: (107.955,61.2682)
+  Legal location: (107.8,63.96)
+  Displacement:   2.696 um ( 0.94 row height)
+Cell: byte_controller/bit_controller/U56 (NAND2X1)
+  Input location: (85.0682,103.913)
+  Legal location: (84.76,101.4)
+  Displacement:   2.532 um ( 0.88 row height)
+Cell: byte_controller/bit_controller/fSDA_reg_0_ (DFFASX1)
+  Input location: (19.0246,127.962)
+  Legal location: (17.88,130.2)
+  Displacement:   2.514 um ( 0.87 row height)
+Cell: byte_controller/bit_controller/sub_228/U1 (INVX0)
+  Input location: (61.3111,86.6305)
+  Legal location: (61.4,84.12)
+  Displacement:   2.512 um ( 0.87 row height)
+Cell: byte_controller/bit_controller/U79 (NOR2X0)
+  Input location: (81.1573,113.306)
+  Legal location: (81.24,115.8)
+  Displacement:   2.495 um ( 0.87 row height)
+Cell: cr_reg_1_ (DFFARX1)
+  Input location: (34.8747,18.4222)
+  Legal location: (34.84,20.76)
+  Displacement:   2.338 um ( 0.81 row height)
+Cell: byte_controller/bit_controller/U11 (INVX0)
+  Input location: (28.0348,101.278)
+  Legal location: (30.36,101.4)
+  Displacement:   2.328 um ( 0.81 row height)
+
+Legalization succeeded.
+Total Legalizer CPU: 1.193
+----------------------------------------------------------------
+
+Min routing layer: M2
+Max routing layer: M9
+
+
+Warning: Cell contains tie connections which are not connected to real PG. (ZRT-511)
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: Ignore 35 top cell ports with no pins. (ZRT-027)
+
+Block Pin Constraint   Min Pin Max Pin Reserve
+                       Layer   Layer   Layer    Feedthroughs
+--------------------   ------  ------  ------   ------------
+i2c_master_top         M2      M9      M9       Not allowed
+
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Warning: Master cell i2c_master_top has duplicated redundant library pin shapes at {0.005 -2.240} {149.675 -1.600} on layer M2. (ZRT-625)
+Note - message 'ZRT-625' limit (10) exceeded. Remainder will be suppressed.
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used   86  Alloctr   87  Proc 1664 
+Printing options for 'route.common.*'
+
+Printing options for 'route.global.*'
+
+Begin global routing.
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (-2.88,-2.88,152.56,150.96)
+Number of routing layers = 9
+layer M1, dir Hor, min width = 0.14, min space = 0.14 pitch = 0.32
+layer M2, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+layer M3, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M4, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M5, dir Hor, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M6, dir Ver, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M7, dir Hor, min width = 0.16, min space = 0.16 pitch = 2.56
+layer M8, dir Ver, min width = 0.16, min space = 0.16 pitch = 3.84
+layer M9, dir Hor, min width = 0.45, min space = 0.45 pitch = 5.12
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used   87  Alloctr   87  Proc 1664 
+Net statistics:
+Total number of nets to route for block pin placement     = 34
+Number of interface nets to route for block pin placement = 34
+Number of single or zero port nets = 2
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used   87  Alloctr   87  Proc 1664 
+Average gCell capacity  17.14    on layer (1)    M1
+Average gCell capacity  17.32    on layer (2)    M2
+Average gCell capacity  8.54     on layer (3)    M3
+Average gCell capacity  8.64     on layer (4)    M4
+Average gCell capacity  4.25     on layer (5)    M5
+Average gCell capacity  4.29     on layer (6)    M6
+Average gCell capacity  4.14     on layer (7)    M7
+Average gCell capacity  2.79     on layer (8)    M8
+Average gCell capacity  2.04     on layer (9)    M9
+Average number of tracks per gCell 17.21         on layer (1)    M1
+Average number of tracks per gCell 17.39         on layer (2)    M2
+Average number of tracks per gCell 8.61  on layer (3)    M3
+Average number of tracks per gCell 8.71  on layer (4)    M4
+Average number of tracks per gCell 4.36  on layer (5)    M5
+Average number of tracks per gCell 4.39  on layer (6)    M6
+Average number of tracks per gCell 4.25  on layer (7)    M7
+Average number of tracks per gCell 2.89  on layer (8)    M8
+Average number of tracks per gCell 2.14  on layer (9)    M9
+Number of gCells = 7056
+Current Stage stats:
+[End of Build Congestion map] Elapsed real time: 0:00:00 
+[End of Build Congestion map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion map] Total (MB): Used   87  Alloctr   88  Proc 1664 
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Data] Total (MB): Used   87  Alloctr   88  Proc 1664 
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    8  Alloctr    8  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used   95  Alloctr   96  Proc 1664 
+Information: Using 1 threads for routing. (ZRT-444)
+
+Start GR phase 0
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Initial Routing] Total (MB): Used   95  Alloctr   96  Proc 1664 
+Initial. Routing result:
+Initial. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+Initial. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M3         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M5         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 949.32
+Initial. Layer M1 wire length = 0.00
+Initial. Layer M2 wire length = 657.23
+Initial. Layer M3 wire length = 292.09
+Initial. Layer M4 wire length = 0.00
+Initial. Layer M5 wire length = 0.00
+Initial. Layer M6 wire length = 0.00
+Initial. Layer M7 wire length = 0.00
+Initial. Layer M8 wire length = 0.00
+Initial. Layer M9 wire length = 0.00
+Initial. Total Number of Contacts = 40
+Initial. Via VIA12C count = 31
+Initial. Via VIA23C count = 9
+Initial. Via VIA34C count = 0
+Initial. Via VIA45C count = 0
+Initial. Via VIA56C count = 0
+Initial. Via VIA67C count = 0
+Initial. Via VIA78C count = 0
+Initial. Via VIA89C count = 0
+Initial. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:00 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Stage (MB): Used    8  Alloctr    8  Proc    0 
+[End of Whole Chip Routing] Total (MB): Used   95  Alloctr   96  Proc 1664 
+
+Information: Global Routing terminated early: false (ZRT-103)
+Current Stage stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[GR: Done] Total (MB): Used   95  Alloctr   96  Proc 1664 
+GR Total stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used    8  Alloctr    8  Proc    0 
+[GR: Done] Total (MB): Used   95  Alloctr   96  Proc 1664 
+Final total stats:
+[End of Global Routing] Elapsed real time: 0:00:00 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Global Routing] Stage (MB): Used    8  Alloctr    8  Proc    0 
+[End of Global Routing] Total (MB): Used   94  Alloctr   95  Proc 1664 
+CPU Time for Global Route: 00:00:02.90u 00:00:00.00s 00:00:02.91e: 
+Number of block ports: 35
+Number of block pin locations assigned from router: 31
+Number of PG ports on blocks: 0
+Number of pins created: 35
+CPU Time for Pin Placement: 00:00:00.09u 00:00:00.00s 00:00:00.09e: 
+Total Pin Placement CPU Time: 00:00:02.99u 00:00:00.00s 00:00:02.99e: 
+Information: Overwriting block 'initial_placement.design' in library 'I2C'. (DES-025)
+icc2_shell> source ./scripts/Power.tcl
+Pattern ring_pattern exists and is re-defined.
+Successfully create PG ring pattern ring_pattern.
+Successfully set PG strategy ring_strat.
+Sanity check for inputs.
+No strategy-level via rule is specified, the default rule will be applied.
+Automatic PG net connection through connect_pg_net is disabled.
+Loading library and design information.
+Updating PG strategies.
+Updating strategy ring_strat.
+Number of Standard Cells: 575
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating rings.
+Creating via connection between strategies and existing shapes.
+Via DRC checking runtime 0.00 seconds.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias inside strategy ring_strat.
+Checking 8 stacked vias:0% 10% 20% 30% 50% 60% 70% 80% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Committed 8 wires.
+Committing wires takes 0.00 seconds.
+Committed 8 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 1 seconds.
+Successfully compiled PG.
+Overall runtime: 1 seconds.
+Variable f is defined in -parameters option but not used by any pattern expression.
+Warning: Some defined variables in -parameters option are not used by other options. (PGR-501)
+Pattern mesh_pattern exists and is re-defined.
+Successfully create mesh pattern mesh_pattern.
+Successfully set PG strategy mesh_strat.
+Sanity check for inputs.
+No strategy-level via rule is specified, the default rule will be applied.
+Automatic PG net connection through connect_pg_net is disabled.
+Loading library and design information.
+Updating PG strategies.
+Updating strategy mesh_strat.
+Number of Standard Cells: 575
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating straps and vias in power plan.
+Creating wire shapes for strategies mesh_strat .
+User specified offset for layer M8 in pattern mesh_pattern may result in some wires (partially) out of routing area boundary.
+User specified offset for layer M9 in pattern mesh_pattern may result in some wires (partially) out of routing area boundary.
+Creating wire shapes runtime: 0 seconds
+Blockage cutting and DRC fixing for wire shapes for strategies mesh_strat .
+Check and fix DRC for 22 wires for strategy mesh_strat.
+Checking DRC for 22 wires:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Creating 42 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Creating via shapes for strategies mesh_strat .
+Working on strategy mesh_strat.
+Number of detected intersections: 61
+Total runtime of via shapes creation: 0 seconds
+Check and fix DRC for 61 stacked vias for strategy mesh_strat.
+Checking DRC for 61 stacked vias:0% 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Runtime of via DRC checking for strategy mesh_strat: 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+Via DRC checking runtime 0.00 seconds.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias inside strategy mesh_strat.
+Checking 61 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Committed 42 wires.
+Committing wires takes 0.00 seconds.
+Committed 61 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 0 seconds.
+Successfully compiled PG.
+Overall runtime: 0 seconds.
+Pattern rail_pattern exists and is re-defined.
+Successfully create standard cell rail pattern rail_pattern.
+Successfully set PG strategy rail_strat.
+Sanity check for inputs.
+No strategy-level via rule is specified, the default rule will be applied.
+Automatic PG net connection through connect_pg_net is disabled.
+Loading library and design information.
+Begin building search trees for block I2C:i2c_master_top.design
+Done building search trees for block I2C:i2c_master_top.design (time 0s)
+Updating PG strategies.
+Updating strategy rail_strat.
+Number of Standard Cells: 575
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating standard cell rails.
+Creating standard cell rails for strategy rail_strat.
+DRC checking and fixing for standard cell rail strategy rail_strat.
+Checking DRC for 42 wires:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Creating 42 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+Check and fix DRCs for 231 stacked vias.
+Checking DRC for 231 stacked vias:0% 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Via DRC checking runtime 1.00 seconds.
+via connection runtime: 1 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias between strategies and existing shapes.
+Checking 231 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Committed 42 wires.
+Committing wires takes 0.00 seconds.
+Committed 1617 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 1 seconds.
+Successfully compiled PG.
+Overall runtime: 1 seconds.
+Information: Overwriting block 'power_planning.design' in library 'I2C'. (DES-025)
+icc2_shell> source ./scripts/cell_placement.tcl
+Information: Overwriting block 'cells_placement.design' in library 'I2C'. (DES-025)
+icc2_shell> set_working_design_stack I2C:CTS.design
+icc2_shell> set_working_design_stack I2C:i2c_master_top.design
+icc2_shell> source ./scripts/Routing.tcl
+Information: Overwriting block 'routing.design' in library 'I2C'. (DES-025)
+icc2_shell> source ./scripts/chip_finishing.tcl
+Warning: Nothing implicitly matched 'SHFILL128' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL64' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL1' (SEL-003)
+Error: Nothing matched for -lib_cells (SEL-005)
+Error: bad value specified for option -lib_cells
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ICer/logic_project/PnR/scripts/chip_finishing.tcl'
+        stopped at line 5 due to error. (CMD-081)
+Extended error info:
+bad value specified for option -lib_cells
+    while executing
+"create_stdcell_filler -lib_cell $STD_FILLERS"
+ -- End Extended Error Info
+icc2_shell> set STD_FILLERS " SHFILL128 SHFILL64 SHFILL1 "
+ SHFILL128 SHFILL64 SHFILL1 
+icc2_shell> create_stdcell_filler -lib_cells $STD_FILLERS
+Warning: Nothing implicitly matched 'SHFILL128' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL64' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL1' (SEL-003)
+Error: Nothing matched for -lib_cells (SEL-005)
+Error: bad value specified for option -lib_cells
+        Use error_info for more info. (CMD-013)
+icc2_shell> connect_pg_net -automatic
+icc2_shell> save_block -as routing_with_filler
+Information: Overwriting block 'routing_with_filler.design' in library 'I2C'. (DES-025)
+1
+icc2_shell> create_stdcell_filler -lib_cells {SHFILL128 SHFILL64 SHFILL1}
+Warning: Nothing implicitly matched 'SHFILL128' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL64' (SEL-003)
+Warning: Nothing implicitly matched 'SHFILL1' (SEL-003)
+Error: Nothing matched for -lib_cells (SEL-005)
+Error: bad value specified for option -lib_cells
+        Use error_info for more info. (CMD-013)
+icc2_shell> get_cell SH*
+Warning: No cell objects matched 'SH*' (SEL-004)
+Error: Nothing matched for collection (SEL-005)
+icc2_shell> get_cells SHILL128
+Warning: No cell objects matched 'SHILL128' (SEL-004)
+Error: Nothing matched for collection (SEL-005)
+icc2_shell> get_cell */SHILL128
+Warning: No cell objects matched '*/SHILL128' (SEL-004)
+Error: Nothing matched for collection (SEL-005)
+icc2_shell> 
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Information: The net parasitics of block i2c_master_top are cleared. (TIM-123)
+Updating the database ...
+CPU Time for Global Route: 00:00:00.07u 00:00:00.00s 00:00:00.07e: 
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Updating the database ...
+CPU Time for Global Route: 00:00:00.07u 00:00:00.00s 00:00:00.07e: 
+Error: Invalid coordinate list ' {0.000 0.000} {-0.000 0.000} {-0.000 -0.000} {0.000 -0.000} '; list must contain at least three non-colinear coordinates. (NDMUI-101)
+Error: Invalid coordinate list ' {0.000 0.000} {-0.000 0.000} {-0.000 -0.000} {0.000 -0.000} '; list must contain at least three non-colinear coordinates. (NDMUI-101)
+
+Running global router for congestion map ...
+Info: Set app option 'route.global.deterministic' to on
+
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    5  Alloctr    5  Proc 2858 
+Printing options for 'route.common.*'
+common.verbose_level                                    :        0                   
+
+Printing options for 'route.global.*'
+global.deterministic                                    :        on                  
+global.placement_timing_driven_mode                     :        false               
+global.timing_driven                                    :        false               
+
+Begin global routing.
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: Ignore 2 top cell ports with no pins. (ZRT-027)
+Info: number of net_type_blockage: 0 
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used   67  Alloctr   67  Proc    0 
+[End of Read DB] Total (MB): Used   72  Alloctr   73  Proc 2858 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00,0.00,149.68,148.08)
+Number of routing layers = 9
+layer M1, dir Hor, min width = 0.14, min space = 0.14 pitch = 0.32
+layer M2, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+layer M3, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M4, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M5, dir Hor, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M6, dir Ver, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M7, dir Hor, min width = 0.16, min space = 0.16 pitch = 2.56
+layer M8, dir Ver, min width = 0.16, min space = 0.16 pitch = 3.84
+layer M9, dir Hor, min width = 0.45, min space = 0.45 pitch = 5.12
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used   72  Alloctr   73  Proc 2858 
+Net statistics:
+Total number of nets     = 762
+Number of nets to route  = 0
+Number of single or zero port nets = 2
+760 nets are fully connected,
+ of which 760 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used   73  Alloctr   73  Proc 2858 
+Average gCell capacity  4.31     on layer (1)    M1
+Average gCell capacity  7.41     on layer (2)    M2
+Average gCell capacity  4.25     on layer (3)    M3
+Average gCell capacity  4.17     on layer (4)    M4
+Average gCell capacity  2.13     on layer (5)    M5
+Average gCell capacity  2.10     on layer (6)    M6
+Average gCell capacity  2.12     on layer (7)    M7
+Average gCell capacity  1.02     on layer (8)    M8
+Average gCell capacity  0.72     on layer (9)    M9
+Average number of tracks per gCell 9.10  on layer (1)    M1
+Average number of tracks per gCell 9.02  on layer (2)    M2
+Average number of tracks per gCell 4.57  on layer (3)    M3
+Average number of tracks per gCell 4.52  on layer (4)    M4
+Average number of tracks per gCell 2.29  on layer (5)    M5
+Average number of tracks per gCell 2.29  on layer (6)    M6
+Average number of tracks per gCell 2.29  on layer (7)    M7
+Average number of tracks per gCell 1.52  on layer (8)    M8
+Average number of tracks per gCell 1.16  on layer (9)    M9
+Number of gCells = 23868
+Current Stage stats:
+[End of Build Congestion map] Elapsed real time: 0:00:00 
+[End of Build Congestion map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion map] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Data] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Information: Using 1 threads for routing. (ZRT-444)
+multi gcell levels ON
+
+Start GR phase 0
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Initial Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Initial. Routing result:
+Initial. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+Initial. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+Initial. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+Initial. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+Initial. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+Initial. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+Initial. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 0.00
+Initial. Layer M1 wire length = 0.00
+Initial. Layer M2 wire length = 0.00
+Initial. Layer M3 wire length = 0.00
+Initial. Layer M4 wire length = 0.00
+Initial. Layer M5 wire length = 0.00
+Initial. Layer M6 wire length = 0.00
+Initial. Layer M7 wire length = 0.00
+Initial. Layer M8 wire length = 0.00
+Initial. Layer M9 wire length = 0.00
+Initial. Total Number of Contacts = 0
+Initial. Via VIA12C count = 0
+Initial. Via VIA23C count = 0
+Initial. Via VIA34C count = 0
+Initial. Via VIA45C count = 0
+Initial. Via VIA56C count = 0
+Initial. Via VIA67C count = 0
+Initial. Via VIA78C count = 0
+Initial. Via VIA89C count = 0
+Initial. completed.
+
+Start GR phase 1
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+phase1. Routing result:
+phase1. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+phase1. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+phase1. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+phase1. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+phase1. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+phase1. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+phase1. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase1. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 0.00
+phase1. Layer M1 wire length = 0.00
+phase1. Layer M2 wire length = 0.00
+phase1. Layer M3 wire length = 0.00
+phase1. Layer M4 wire length = 0.00
+phase1. Layer M5 wire length = 0.00
+phase1. Layer M6 wire length = 0.00
+phase1. Layer M7 wire length = 0.00
+phase1. Layer M8 wire length = 0.00
+phase1. Layer M9 wire length = 0.00
+phase1. Total Number of Contacts = 0
+phase1. Via VIA12C count = 0
+phase1. Via VIA23C count = 0
+phase1. Via VIA34C count = 0
+phase1. Via VIA45C count = 0
+phase1. Via VIA56C count = 0
+phase1. Via VIA67C count = 0
+phase1. Via VIA78C count = 0
+phase1. Via VIA89C count = 0
+phase1. completed.
+
+Start GR phase 2
+Current Stage stats:
+[End of Phase2 Routing] Elapsed real time: 0:00:00 
+[End of Phase2 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase2 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase2 Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+phase2. Routing result:
+phase2. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+phase2. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+phase2. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+phase2. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+phase2. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+phase2. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+phase2. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase2. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase2. Total Wire Length = 0.00
+phase2. Layer M1 wire length = 0.00
+phase2. Layer M2 wire length = 0.00
+phase2. Layer M3 wire length = 0.00
+phase2. Layer M4 wire length = 0.00
+phase2. Layer M5 wire length = 0.00
+phase2. Layer M6 wire length = 0.00
+phase2. Layer M7 wire length = 0.00
+phase2. Layer M8 wire length = 0.00
+phase2. Layer M9 wire length = 0.00
+phase2. Total Number of Contacts = 0
+phase2. Via VIA12C count = 0
+phase2. Via VIA23C count = 0
+phase2. Via VIA34C count = 0
+phase2. Via VIA45C count = 0
+phase2. Via VIA56C count = 0
+phase2. Via VIA67C count = 0
+phase2. Via VIA78C count = 0
+phase2. Via VIA89C count = 0
+phase2. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:00 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Whole Chip Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+
+Information: Global Routing terminated early: true (ZRT-103)
+
+Congestion utilization per direction:
+Average vertical track utilization   = 12.55 %
+Peak    vertical track utilization   = 100.00 %
+Average horizontal track utilization = 13.18 %
+Peak    horizontal track utilization = 88.89 %
+
+Current Stage stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   74  Proc 2858 
+GR Total stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used   68  Alloctr   68  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+Final total stats:
+[End of Global Routing] Elapsed real time: 0:00:00 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Global Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Global Routing] Total (MB): Used    4  Alloctr    5  Proc 2858 
+
+****************************************
+Report : congestion
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 01:13:29 2024
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |     142 |     3 |     124  ( 2.34%) |       1
+H routing |      70 |     2 |      66  ( 2.49%) |       4
+V routing |      72 |     3 |      58  ( 2.19%) |       1
+
+
+Running global router for congestion map ...
+Info: Set app option 'route.global.deterministic' to on
+
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    5  Alloctr    5  Proc 2858 
+Printing options for 'route.common.*'
+common.verbose_level                                    :        0                   
+
+Printing options for 'route.global.*'
+global.deterministic                                    :        on                  
+global.placement_timing_driven_mode                     :        false               
+global.timing_driven                                    :        false               
+
+Begin global routing.
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: Ignore 2 top cell ports with no pins. (ZRT-027)
+Info: number of net_type_blockage: 0 
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used   67  Alloctr   67  Proc    0 
+[End of Read DB] Total (MB): Used   72  Alloctr   73  Proc 2858 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00,0.00,149.68,148.08)
+Number of routing layers = 9
+layer M1, dir Hor, min width = 0.14, min space = 0.14 pitch = 0.32
+layer M2, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+layer M3, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M4, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M5, dir Hor, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M6, dir Ver, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M7, dir Hor, min width = 0.16, min space = 0.16 pitch = 2.56
+layer M8, dir Ver, min width = 0.16, min space = 0.16 pitch = 3.84
+layer M9, dir Hor, min width = 0.45, min space = 0.45 pitch = 5.12
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used   72  Alloctr   73  Proc 2858 
+Net statistics:
+Total number of nets     = 762
+Number of nets to route  = 0
+Number of single or zero port nets = 2
+760 nets are fully connected,
+ of which 760 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used   73  Alloctr   73  Proc 2858 
+Average gCell capacity  4.31     on layer (1)    M1
+Average gCell capacity  7.41     on layer (2)    M2
+Average gCell capacity  4.25     on layer (3)    M3
+Average gCell capacity  4.17     on layer (4)    M4
+Average gCell capacity  2.13     on layer (5)    M5
+Average gCell capacity  2.10     on layer (6)    M6
+Average gCell capacity  2.12     on layer (7)    M7
+Average gCell capacity  1.02     on layer (8)    M8
+Average gCell capacity  0.72     on layer (9)    M9
+Average number of tracks per gCell 9.10  on layer (1)    M1
+Average number of tracks per gCell 9.02  on layer (2)    M2
+Average number of tracks per gCell 4.57  on layer (3)    M3
+Average number of tracks per gCell 4.52  on layer (4)    M4
+Average number of tracks per gCell 2.29  on layer (5)    M5
+Average number of tracks per gCell 2.29  on layer (6)    M6
+Average number of tracks per gCell 2.29  on layer (7)    M7
+Average number of tracks per gCell 1.52  on layer (8)    M8
+Average number of tracks per gCell 1.16  on layer (9)    M9
+Number of gCells = 23868
+Current Stage stats:
+[End of Build Congestion map] Elapsed real time: 0:00:00 
+[End of Build Congestion map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion map] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Data] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Information: Using 1 threads for routing. (ZRT-444)
+multi gcell levels ON
+
+Start GR phase 0
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Initial Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Initial. Routing result:
+Initial. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+Initial. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+Initial. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+Initial. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+Initial. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+Initial. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+Initial. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 0.00
+Initial. Layer M1 wire length = 0.00
+Initial. Layer M2 wire length = 0.00
+Initial. Layer M3 wire length = 0.00
+Initial. Layer M4 wire length = 0.00
+Initial. Layer M5 wire length = 0.00
+Initial. Layer M6 wire length = 0.00
+Initial. Layer M7 wire length = 0.00
+Initial. Layer M8 wire length = 0.00
+Initial. Layer M9 wire length = 0.00
+Initial. Total Number of Contacts = 0
+Initial. Via VIA12C count = 0
+Initial. Via VIA23C count = 0
+Initial. Via VIA34C count = 0
+Initial. Via VIA45C count = 0
+Initial. Via VIA56C count = 0
+Initial. Via VIA67C count = 0
+Initial. Via VIA78C count = 0
+Initial. Via VIA89C count = 0
+Initial. completed.
+
+Start GR phase 1
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+phase1. Routing result:
+phase1. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+phase1. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+phase1. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+phase1. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+phase1. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+phase1. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+phase1. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase1. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 0.00
+phase1. Layer M1 wire length = 0.00
+phase1. Layer M2 wire length = 0.00
+phase1. Layer M3 wire length = 0.00
+phase1. Layer M4 wire length = 0.00
+phase1. Layer M5 wire length = 0.00
+phase1. Layer M6 wire length = 0.00
+phase1. Layer M7 wire length = 0.00
+phase1. Layer M8 wire length = 0.00
+phase1. Layer M9 wire length = 0.00
+phase1. Total Number of Contacts = 0
+phase1. Via VIA12C count = 0
+phase1. Via VIA23C count = 0
+phase1. Via VIA34C count = 0
+phase1. Via VIA45C count = 0
+phase1. Via VIA56C count = 0
+phase1. Via VIA67C count = 0
+phase1. Via VIA78C count = 0
+phase1. Via VIA89C count = 0
+phase1. completed.
+
+Start GR phase 2
+Current Stage stats:
+[End of Phase2 Routing] Elapsed real time: 0:00:00 
+[End of Phase2 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase2 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase2 Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+phase2. Routing result:
+phase2. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+phase2. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+phase2. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+phase2. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+phase2. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+phase2. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+phase2. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase2. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase2. Total Wire Length = 0.00
+phase2. Layer M1 wire length = 0.00
+phase2. Layer M2 wire length = 0.00
+phase2. Layer M3 wire length = 0.00
+phase2. Layer M4 wire length = 0.00
+phase2. Layer M5 wire length = 0.00
+phase2. Layer M6 wire length = 0.00
+phase2. Layer M7 wire length = 0.00
+phase2. Layer M8 wire length = 0.00
+phase2. Layer M9 wire length = 0.00
+phase2. Total Number of Contacts = 0
+phase2. Via VIA12C count = 0
+phase2. Via VIA23C count = 0
+phase2. Via VIA34C count = 0
+phase2. Via VIA45C count = 0
+phase2. Via VIA56C count = 0
+phase2. Via VIA67C count = 0
+phase2. Via VIA78C count = 0
+phase2. Via VIA89C count = 0
+phase2. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:00 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Whole Chip Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+
+Information: Global Routing terminated early: true (ZRT-103)
+
+Congestion utilization per direction:
+Average vertical track utilization   = 12.55 %
+Peak    vertical track utilization   = 100.00 %
+Average horizontal track utilization = 13.18 %
+Peak    horizontal track utilization = 88.89 %
+
+Current Stage stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   74  Proc 2858 
+GR Total stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used   68  Alloctr   68  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+Final total stats:
+[End of Global Routing] Elapsed real time: 0:00:00 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Global Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Global Routing] Total (MB): Used    4  Alloctr    5  Proc 2858 
+
+****************************************
+Report : congestion
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 01:13:49 2024
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |     142 |     3 |     124  ( 2.34%) |       1
+H routing |      70 |     2 |      66  ( 2.49%) |       4
+V routing |      72 |     3 |      58  ( 2.19%) |       1
+
+
+Running global router for congestion map ...
+Info: Set app option 'route.global.deterministic' to on
+
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    5  Alloctr    5  Proc 2858 
+Printing options for 'route.common.*'
+common.verbose_level                                    :        0                   
+
+Printing options for 'route.global.*'
+global.deterministic                                    :        on                  
+global.placement_timing_driven_mode                     :        false               
+global.timing_driven                                    :        false               
+
+Begin global routing.
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: Ignore 2 top cell ports with no pins. (ZRT-027)
+Info: number of net_type_blockage: 0 
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used   67  Alloctr   67  Proc    0 
+[End of Read DB] Total (MB): Used   72  Alloctr   73  Proc 2858 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00,0.00,149.68,148.08)
+Number of routing layers = 9
+layer M1, dir Hor, min width = 0.14, min space = 0.14 pitch = 0.32
+layer M2, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+layer M3, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M4, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M5, dir Hor, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M6, dir Ver, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M7, dir Hor, min width = 0.16, min space = 0.16 pitch = 2.56
+layer M8, dir Ver, min width = 0.16, min space = 0.16 pitch = 3.84
+layer M9, dir Hor, min width = 0.45, min space = 0.45 pitch = 5.12
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used   72  Alloctr   73  Proc 2858 
+Net statistics:
+Total number of nets     = 762
+Number of nets to route  = 0
+Number of single or zero port nets = 2
+760 nets are fully connected,
+ of which 760 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used   73  Alloctr   73  Proc 2858 
+Average gCell capacity  4.31     on layer (1)    M1
+Average gCell capacity  7.41     on layer (2)    M2
+Average gCell capacity  4.25     on layer (3)    M3
+Average gCell capacity  4.17     on layer (4)    M4
+Average gCell capacity  2.13     on layer (5)    M5
+Average gCell capacity  2.10     on layer (6)    M6
+Average gCell capacity  2.12     on layer (7)    M7
+Average gCell capacity  1.02     on layer (8)    M8
+Average gCell capacity  0.72     on layer (9)    M9
+Average number of tracks per gCell 9.10  on layer (1)    M1
+Average number of tracks per gCell 9.02  on layer (2)    M2
+Average number of tracks per gCell 4.57  on layer (3)    M3
+Average number of tracks per gCell 4.52  on layer (4)    M4
+Average number of tracks per gCell 2.29  on layer (5)    M5
+Average number of tracks per gCell 2.29  on layer (6)    M6
+Average number of tracks per gCell 2.29  on layer (7)    M7
+Average number of tracks per gCell 1.52  on layer (8)    M8
+Average number of tracks per gCell 1.16  on layer (9)    M9
+Number of gCells = 23868
+Current Stage stats:
+[End of Build Congestion map] Elapsed real time: 0:00:00 
+[End of Build Congestion map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion map] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Data] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Information: Using 1 threads for routing. (ZRT-444)
+multi gcell levels ON
+
+Start GR phase 0
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Initial Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Initial. Routing result:
+Initial. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+Initial. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+Initial. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+Initial. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+Initial. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+Initial. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+Initial. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 0.00
+Initial. Layer M1 wire length = 0.00
+Initial. Layer M2 wire length = 0.00
+Initial. Layer M3 wire length = 0.00
+Initial. Layer M4 wire length = 0.00
+Initial. Layer M5 wire length = 0.00
+Initial. Layer M6 wire length = 0.00
+Initial. Layer M7 wire length = 0.00
+Initial. Layer M8 wire length = 0.00
+Initial. Layer M9 wire length = 0.00
+Initial. Total Number of Contacts = 0
+Initial. Via VIA12C count = 0
+Initial. Via VIA23C count = 0
+Initial. Via VIA34C count = 0
+Initial. Via VIA45C count = 0
+Initial. Via VIA56C count = 0
+Initial. Via VIA67C count = 0
+Initial. Via VIA78C count = 0
+Initial. Via VIA89C count = 0
+Initial. completed.
+
+Start GR phase 1
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+phase1. Routing result:
+phase1. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+phase1. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+phase1. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+phase1. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+phase1. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+phase1. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+phase1. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase1. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 0.00
+phase1. Layer M1 wire length = 0.00
+phase1. Layer M2 wire length = 0.00
+phase1. Layer M3 wire length = 0.00
+phase1. Layer M4 wire length = 0.00
+phase1. Layer M5 wire length = 0.00
+phase1. Layer M6 wire length = 0.00
+phase1. Layer M7 wire length = 0.00
+phase1. Layer M8 wire length = 0.00
+phase1. Layer M9 wire length = 0.00
+phase1. Total Number of Contacts = 0
+phase1. Via VIA12C count = 0
+phase1. Via VIA23C count = 0
+phase1. Via VIA34C count = 0
+phase1. Via VIA45C count = 0
+phase1. Via VIA56C count = 0
+phase1. Via VIA67C count = 0
+phase1. Via VIA78C count = 0
+phase1. Via VIA89C count = 0
+phase1. completed.
+
+Start GR phase 2
+Current Stage stats:
+[End of Phase2 Routing] Elapsed real time: 0:00:00 
+[End of Phase2 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase2 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase2 Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+phase2. Routing result:
+phase2. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+phase2. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+phase2. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+phase2. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+phase2. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+phase2. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+phase2. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase2. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase2. Total Wire Length = 0.00
+phase2. Layer M1 wire length = 0.00
+phase2. Layer M2 wire length = 0.00
+phase2. Layer M3 wire length = 0.00
+phase2. Layer M4 wire length = 0.00
+phase2. Layer M5 wire length = 0.00
+phase2. Layer M6 wire length = 0.00
+phase2. Layer M7 wire length = 0.00
+phase2. Layer M8 wire length = 0.00
+phase2. Layer M9 wire length = 0.00
+phase2. Total Number of Contacts = 0
+phase2. Via VIA12C count = 0
+phase2. Via VIA23C count = 0
+phase2. Via VIA34C count = 0
+phase2. Via VIA45C count = 0
+phase2. Via VIA56C count = 0
+phase2. Via VIA67C count = 0
+phase2. Via VIA78C count = 0
+phase2. Via VIA89C count = 0
+phase2. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:00 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Whole Chip Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+
+Information: Global Routing terminated early: true (ZRT-103)
+
+Congestion utilization per direction:
+Average vertical track utilization   = 12.55 %
+Peak    vertical track utilization   = 100.00 %
+Average horizontal track utilization = 13.18 %
+Peak    horizontal track utilization = 88.89 %
+
+Current Stage stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   74  Proc 2858 
+GR Total stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used   68  Alloctr   68  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+Final total stats:
+[End of Global Routing] Elapsed real time: 0:00:00 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Global Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Global Routing] Total (MB): Used    4  Alloctr    5  Proc 2858 
+
+****************************************
+Report : congestion
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 01:14:07 2024
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |     142 |     3 |     124  ( 2.34%) |       1
+H routing |      70 |     2 |      66  ( 2.49%) |       4
+V routing |      72 |     3 |      58  ( 2.19%) |       1
+
+
+Running global router for congestion map ...
+Info: Set app option 'route.global.deterministic' to on
+
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    5  Alloctr    5  Proc 2858 
+Printing options for 'route.common.*'
+common.verbose_level                                    :        0                   
+
+Printing options for 'route.global.*'
+global.deterministic                                    :        on                  
+global.placement_timing_driven_mode                     :        false               
+global.timing_driven                                    :        false               
+
+Begin global routing.
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: Ignore 2 top cell ports with no pins. (ZRT-027)
+Info: number of net_type_blockage: 0 
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used   67  Alloctr   67  Proc    0 
+[End of Read DB] Total (MB): Used   72  Alloctr   73  Proc 2858 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00,0.00,149.68,148.08)
+Number of routing layers = 9
+layer M1, dir Hor, min width = 0.14, min space = 0.14 pitch = 0.32
+layer M2, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+layer M3, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M4, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M5, dir Hor, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M6, dir Ver, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M7, dir Hor, min width = 0.16, min space = 0.16 pitch = 2.56
+layer M8, dir Ver, min width = 0.16, min space = 0.16 pitch = 3.84
+layer M9, dir Hor, min width = 0.45, min space = 0.45 pitch = 5.12
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used   72  Alloctr   73  Proc 2858 
+Net statistics:
+Total number of nets     = 762
+Number of nets to route  = 0
+Number of single or zero port nets = 2
+760 nets are fully connected,
+ of which 760 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used   73  Alloctr   73  Proc 2858 
+Average gCell capacity  4.31     on layer (1)    M1
+Average gCell capacity  7.41     on layer (2)    M2
+Average gCell capacity  4.25     on layer (3)    M3
+Average gCell capacity  4.17     on layer (4)    M4
+Average gCell capacity  2.13     on layer (5)    M5
+Average gCell capacity  2.10     on layer (6)    M6
+Average gCell capacity  2.12     on layer (7)    M7
+Average gCell capacity  1.02     on layer (8)    M8
+Average gCell capacity  0.72     on layer (9)    M9
+Average number of tracks per gCell 9.10  on layer (1)    M1
+Average number of tracks per gCell 9.02  on layer (2)    M2
+Average number of tracks per gCell 4.57  on layer (3)    M3
+Average number of tracks per gCell 4.52  on layer (4)    M4
+Average number of tracks per gCell 2.29  on layer (5)    M5
+Average number of tracks per gCell 2.29  on layer (6)    M6
+Average number of tracks per gCell 2.29  on layer (7)    M7
+Average number of tracks per gCell 1.52  on layer (8)    M8
+Average number of tracks per gCell 1.16  on layer (9)    M9
+Number of gCells = 23868
+Current Stage stats:
+[End of Build Congestion map] Elapsed real time: 0:00:00 
+[End of Build Congestion map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion map] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Data] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Information: Using 1 threads for routing. (ZRT-444)
+multi gcell levels ON
+
+Start GR phase 0
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Initial Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Initial. Routing result:
+Initial. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+Initial. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+Initial. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+Initial. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+Initial. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+Initial. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+Initial. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 0.00
+Initial. Layer M1 wire length = 0.00
+Initial. Layer M2 wire length = 0.00
+Initial. Layer M3 wire length = 0.00
+Initial. Layer M4 wire length = 0.00
+Initial. Layer M5 wire length = 0.00
+Initial. Layer M6 wire length = 0.00
+Initial. Layer M7 wire length = 0.00
+Initial. Layer M8 wire length = 0.00
+Initial. Layer M9 wire length = 0.00
+Initial. Total Number of Contacts = 0
+Initial. Via VIA12C count = 0
+Initial. Via VIA23C count = 0
+Initial. Via VIA34C count = 0
+Initial. Via VIA45C count = 0
+Initial. Via VIA56C count = 0
+Initial. Via VIA67C count = 0
+Initial. Via VIA78C count = 0
+Initial. Via VIA89C count = 0
+Initial. completed.
+
+Start GR phase 1
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+phase1. Routing result:
+phase1. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+phase1. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+phase1. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+phase1. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+phase1. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+phase1. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+phase1. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase1. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 0.00
+phase1. Layer M1 wire length = 0.00
+phase1. Layer M2 wire length = 0.00
+phase1. Layer M3 wire length = 0.00
+phase1. Layer M4 wire length = 0.00
+phase1. Layer M5 wire length = 0.00
+phase1. Layer M6 wire length = 0.00
+phase1. Layer M7 wire length = 0.00
+phase1. Layer M8 wire length = 0.00
+phase1. Layer M9 wire length = 0.00
+phase1. Total Number of Contacts = 0
+phase1. Via VIA12C count = 0
+phase1. Via VIA23C count = 0
+phase1. Via VIA34C count = 0
+phase1. Via VIA45C count = 0
+phase1. Via VIA56C count = 0
+phase1. Via VIA67C count = 0
+phase1. Via VIA78C count = 0
+phase1. Via VIA89C count = 0
+phase1. completed.
+
+Start GR phase 2
+Current Stage stats:
+[End of Phase2 Routing] Elapsed real time: 0:00:00 
+[End of Phase2 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase2 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase2 Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+phase2. Routing result:
+phase2. Both Dirs: Overflow =    83 Max = 3 GRCs =   124 (2.34%)
+phase2. H routing: Overflow =    28 Max = 2 (GRCs =  4) GRCs =    66 (2.49%)
+phase2. V routing: Overflow =    54 Max = 3 (GRCs =  1) GRCs =    58 (2.19%)
+phase2. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M2         Overflow =    53 Max = 3 (GRCs =  1) GRCs =    57 (2.15%)
+phase2. M3         Overflow =    27 Max = 2 (GRCs =  4) GRCs =    64 (2.41%)
+phase2. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+phase2. M5         Overflow =     1 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase2. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase2. Total Wire Length = 0.00
+phase2. Layer M1 wire length = 0.00
+phase2. Layer M2 wire length = 0.00
+phase2. Layer M3 wire length = 0.00
+phase2. Layer M4 wire length = 0.00
+phase2. Layer M5 wire length = 0.00
+phase2. Layer M6 wire length = 0.00
+phase2. Layer M7 wire length = 0.00
+phase2. Layer M8 wire length = 0.00
+phase2. Layer M9 wire length = 0.00
+phase2. Total Number of Contacts = 0
+phase2. Via VIA12C count = 0
+phase2. Via VIA23C count = 0
+phase2. Via VIA34C count = 0
+phase2. Via VIA45C count = 0
+phase2. Via VIA56C count = 0
+phase2. Via VIA67C count = 0
+phase2. Via VIA78C count = 0
+phase2. Via VIA89C count = 0
+phase2. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:00 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Whole Chip Routing] Total (MB): Used   73  Alloctr   74  Proc 2858 
+
+Information: Global Routing terminated early: true (ZRT-103)
+
+Congestion utilization per direction:
+Average vertical track utilization   = 12.55 %
+Peak    vertical track utilization   = 100.00 %
+Average horizontal track utilization = 13.18 %
+Peak    horizontal track utilization = 88.89 %
+
+Current Stage stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   74  Proc 2858 
+GR Total stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used   68  Alloctr   68  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   74  Proc 2858 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+Final total stats:
+[End of Global Routing] Elapsed real time: 0:00:00 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Global Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Global Routing] Total (MB): Used    4  Alloctr    5  Proc 2858 
+
+****************************************
+Report : congestion
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 01:14:19 2024
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |     142 |     3 |     124  ( 2.34%) |       1
+H routing |      70 |     2 |      66  ( 2.49%) |       4
+V routing |      72 |     3 |      58  ( 2.19%) |       1
+

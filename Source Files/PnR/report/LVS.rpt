@@ -1,0 +1,58 @@
+Information: Using 1 threads for LVS
+[Check Short] Stage 1	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 1-2	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 2	Elapsed =    0:00:00, CPU =    0:00:00
+Detected more than 20 short violations. Skip checking short violations
+[Check Short] Stage 3	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] End	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] Init	Elapsed =    0:00:00, CPU =    0:00:00
+Warning: Port GVSS have no valid pin shapes. Skip this port. (RT-203)
+Information: Detected short violation. Net1: GVDD. Net2: N102. BBox: (22.7100 15.2600)(22.8500 15.3000). Layer: M1. (RT-586)
+Information: Detected open violation for Net GVSS. BBox: (0.0000 7.8800)(139.1800 137.5800). (RT-585)
+Information: Detected short violation. Net1: GVSS. Net2: arst_i. BBox: (40.4700 18.1000)(44.1150 18.1800). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: n88. BBox: (36.2450 18.1000)(36.6100 18.1800). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVDD. Net2: N15. BBox: (15.4500 20.4600)(15.5900 20.4700). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVDD. Net2: wb_cyc_i. BBox: (17.2800 20.4600)(17.6800 20.5400). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVDD. Net2: byte_controller/dcnt[2]. BBox: (133.0750 15.2700)(133.2150 15.3000). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: HFSNET_0. BBox: (127.8300 17.5800)(131.4750 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: byte_controller/n78. BBox: (123.6050 17.5800)(123.9700 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVDD. Net2: rxr[3]. BBox: (120.5950 15.2700)(120.7350 15.3000). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: HFSNET_0. BBox: (115.3500 17.5800)(118.9950 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: byte_controller/n67. BBox: (111.1250 17.5800)(111.4900 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: N39. BBox: (70.1300 17.5800)(70.2700 17.6050). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVDD. Net2: wb_inta_o. BBox: (56.9150 15.2700)(57.0550 15.3000). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: arst_i. BBox: (53.5300 17.6500)(55.3150 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: arst_i. BBox: (51.6700 17.5800)(55.3150 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: N106. BBox: (47.4450 17.5800)(47.8100 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVDD. Net2: cr[0]. BBox: (34.8350 15.2700)(34.9750 15.3000). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: arst_i. BBox: (29.5900 17.5800)(33.2350 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: n86. BBox: (25.3650 17.5800)(25.7300 17.6600). Layer: M1. (RT-586)
+Information: Detected short violation. Net1: GVSS. Net2: n86. BBox: (25.3650 17.6500)(25.7300 17.6600). Layer: M1. (RT-586)
+Warning: Port GVDD have no valid pin shapes. Skip this port. (RT-203)
+[Check Net] 10% 	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] 20% 	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] 30% 	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] 40% 	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] 50% 	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] 60% 	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] 70% 	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] 80% 	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Net] 90% 	Elapsed =    0:00:00, CPU =    0:00:00
+Warning: Net VDD has less than 2 valid port. Skip open checking for this net. (RT-204)
+[Check Net] All nets are submitted.
+Warning: Net VSS has less than 2 valid port. Skip open checking for this net. (RT-204)
+[Check Net] 100%	Elapsed =    0:00:00, CPU =    0:00:00
+
+===============================================================
+    Maximum number of violations is set to 20
+    Abort checking when more than 20 violations are found
+    All violations might not be found.
+===============================================================
+Total number of input nets is 748.
+Total number of short violations is 20.
+Total number of open nets is 1.
+Open nets are GVSS 
+Total number of floating route violations is 0.
+
+Elapsed =    0:00:00, CPU =    0:00:00
+1

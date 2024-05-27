@@ -1,0 +1,6 @@
+./output/I2C_top.out.spef.worst_25.spef for scenarios: 
+	 scenario: default, corner type: late
+
+./output/I2C_top.out.spef.best_25.spef for scenarios: 
+	 scenario: default, corner type: early
+

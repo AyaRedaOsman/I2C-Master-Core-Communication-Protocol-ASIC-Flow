@@ -1,0 +1,51 @@
+Loading db file '/home/ICer/logic_project/DB/saed90nm_typ.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 01:41:27 2024
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_typ (File: /home/ICer/logic_project/DB/saed90nm_typ.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+i2c_master_top         16000             saed90nm_typ
+i2c_master_byte_ctrl   8000              saed90nm_typ
+i2c_master_bit_ctrl    8000              saed90nm_typ
+i2c_master_bit_ctrl_DW01_dec_0 8000      saed90nm_typ
+i2c_master_bit_ctrl_DW01_dec_1 8000      saed90nm_typ
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+i2c_master_top                            4.879    5.949 3.38e+07   44.611 100.0
+  byte_controller (i2c_master_byte_ctrl)    3.545    4.060 2.31e+07   30.672  68.8
+    bit_controller (i2c_master_bit_ctrl)    2.729    3.595 1.74e+07   23.738  53.2
+      sub_228 (i2c_master_bit_ctrl_DW01_dec_1)    0.406    0.530 1.16e+06    2.093   4.7
+      sub_260 (i2c_master_bit_ctrl_DW01_dec_0) 6.43e-03 1.05e-02 8.67e+05    0.884   2.0
+1

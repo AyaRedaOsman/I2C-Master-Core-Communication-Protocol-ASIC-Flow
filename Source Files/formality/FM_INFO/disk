@@ -1,0 +1,10 @@
+Directory = /home/vlsi/I2C_pro/formality
+Total     = 185 GB
+Available = 109 GB
+Used      = 76 GB (42%)
+
+Directory = /tmp
+Total     = 300 GB
+Available = 69 GB
+Used      = 231 GB (77%)
+

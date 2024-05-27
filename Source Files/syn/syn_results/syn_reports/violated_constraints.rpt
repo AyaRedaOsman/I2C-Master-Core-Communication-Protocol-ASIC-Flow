@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 01:41:27 2024
+****************************************
+
+
+   min_delay/hold ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   byte_controller/bit_controller/dscl_oen_reg/D     0.32     0.26 f    -0.06 (VIOLATED)
+   wb_ack_o_reg/D               0.32           0.27 f        -0.05  (VIOLATED)
+   byte_controller/bit_controller/cSCL_reg_1_/D     0.31     0.28 f    -0.03 (VIOLATED)
+   byte_controller/bit_controller/cSDA_reg_1_/D     0.31     0.28 f    -0.03 (VIOLATED)
+
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   i2c_master_top               0.00        9113.44       -9113.44  (VIOLATED)
+
+
+1

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="0" majorVersion="1" minorVersion="8" name="__private_meta_data_:i2c_master_top_dppinassgn.err" designName="routing_with_filler" info="" checker="Pin Placement Check" checkerVersion="" created="1716137945" createdDate="05:20:2024:00:59:05:CST" modified="1716138370" modifiedDate="05:20:2024:01:06:10:CST" interactive="false" internal="false" metaData="true" numTypes="0" numInsts="0"/>

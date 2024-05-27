@@ -1,0 +1,1263 @@
+Use advanced legalizer engine : 0
+Information: Clearing abstracted power annotation ... 
+
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (150000 150000) (1346800 1330800)
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 2
+Running merge clock gates
+Setting all modes active.
+Information: CTS will work on the following scenarios. (CTS-101)
+   default	(Mode: default; Corner: default)
+Information: CTS will work on all clocks in active scenarios, including 1 master clocks and 0 generated clocks. (CTS-107)
+Information: Clock derating is disabled
+
+CTS related app options set by user:
+   No CTS related app option is set.
+
+
+MCG (merge_clock_gates) Statistics: ICG
+    ICG                           0
+    Attempt                       0
+    Survivor                      0
+    Removed                       0
+    Total ICG at the end          0
+
+Clearing enable all modes setting.
+
+MCG (merge_clock_gates) Statistics: Total
+    ICG                           0
+    Attempt                       0
+    Survivor                      0
+    Removed                       0
+    Total ICG at the end          0
+
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (150000 150000) (1346800 1330800)
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 2
+INFO: sweep stats: 0 gates / 0 nets gobbled, 0 gates (0 seq) simplified
+Running initial placement
+----------------------------------------------------------------
+running create_placement
+Warning: turning e-eLpp off because no active dynamic power scenarios were found
+
+Placement Options:
+Effort:                        high_effort         
+Timing Driven:                 true                
+Buffering Aware Timing Driven: true                
+Seed locs:                     false               
+Incremental:                   false               
+Congestion:                    false               
+
+Printing options for 'place.coarse.*' (non-default only)
+place.coarse.continue_on_missing_scandef                :	 true                
+place.coarse.fix_cells_on_soft_blockages                :	 true                
+
+Start transferring placement data.
+Restructuring in 5 hierarchies
+CGRW: importing permutable pins & pairs, size 8 and above
+Information: Automatic timing control is enabled.
+DTDP placement: scenario=default
+Completed transferring placement data.
+Running placement using 1 thread(s)
+Information: Automatic density control has selected the following settings: max_density 0.20, congestion_driven_max_util 0.87. (PLACE-027)
+Running precluster optimization.
+coarse place 0% done.
+coarse place 13% done.
+coarse place 25% done.
+coarse place 38% done.
+coarse place 50% done.
+coarse place 63% done.
+coarse place 75% done.
+coarse place 88% done.
+coarse place 100% done.
+Information: Coarse placer weighted wire length estimate = 1.87629e+08
+----------------------------------------------------------------
+
+Running initial HFS and DRC step.
+Use advanced legalizer engine : 0
+Information: Current block utilization is '0.60850', effective utilization is '0.60845'. (OPT-055)
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:i2c_master_top.design'. (TIM-125)
+Information: Design Average RC for design i2c_master_top  (NEX-011)
+Information: r = 0.521390 ohm/um, via_r = 0.867266 ohm/cut, c = 0.085697 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.562500 ohm/um, via_r = 0.869480 ohm/cut, c = 0.100103 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'i2c_master_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 675, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 10, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:09     0.000     0.000  8598.528     0.000     0.000         9        60         0     0.000       426 
+
+APSINFO: No multi-Vth libcells found, turning off percentage LVT optimization flow
+START_FUNC: psynopt_delay_opto CPU:    490 s ( 0.14 hr) ELAPSE:   6130 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:57 2024
+
+    Processing cells .....10%.....20%.....30%.....40%.....50%.....60%.....70%.....80%.....90%.....100%
+
+    Processing cells .....10%.....20%.....30%.....40%.....50%.....60%.....70%.....80%.....90%.....100%
+
+    Processing cells .....10%.....20%.....30%.....40%.....50%.....60%.....70%.....80%.....90%.....100%
+INFO: sweep stats: 0 gates / 4 nets gobbled, 0 gates (0 seq) simplified
+Isolated 0 ports, skipped 0 ports
+Already Isolated 0 ports, Deleted 0 existing Isolation cells 
+
+    Processing cells .....10%.....20%.....30%.....40%.....50%.....60%.....70%.....80%.....90%.....100%
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:09     0.000     0.000  8598.528     0.000     0.000         9        60         0     0.000       426 
+
+END_FUNC: psynopt_delay_opto   CPU:    490 s ( 0.14 hr) ELAPSE:   6130 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:58 2024
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+    Scenario default  WNHS = 0.108066, TNHS = 2.017818, NHVP = 86
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK     MIN DELAY 
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY       COST   
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- -----------
+      1:42:09     0.000     0.000  8598.528     0.000     0.000         9        60         0     0.000       426    -0.108
+
+ORB: timingScenario default timingCorner default
+INFO: No leakage and power scenarios. Using regular scenarios instead.
+INFO: No active leakage scenarios. Leakage will be turned off
+ORB: Nominal = 0.060209  Design MT = inf  Target = 0.481676 (8.000 nominal)  MaxRC = 0.173897
+Collecting Drivers ...  
+Design max_transition = inf
+Design max_capacitance = inf
+Found 2 buffer-tree drivers
+
+Roi-HfsDrc SN: 3403505 (1717.285400)
+
+Processing Buffer Trees  (ROI) ... 
+
+    [1]  10% ...
+    [2]  20% ...
+    [2] 100%  Done
+
+                  Deleted        Added
+------------ ------------ ------------
+    Buffers:            9            3
+  Inverters:            4            1
+------------ ------------ ------------
+      Total:           13            4
+------------ ------------ ------------
+
+Number of Drivers Sized: 0 [0.00%]
+
+ZBuf-MEM(max-mem) = total 436840 K / inuse 402184 K
+Information: The net parasitics of block i2c_master_top are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:i2c_master_top.design'. (TIM-125)
+Information: Design Average RC for design i2c_master_top  (NEX-011)
+Information: r = 0.521390 ohm/um, via_r = 0.867266 ohm/cut, c = 0.085304 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.562500 ohm/um, via_r = 0.869480 ohm/cut, c = 0.099792 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'i2c_master_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 666, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 9, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+
+Running initial optimization step.
+Number of feedthrough buffers added 0
+START_FUNC: psynopt_delay_opto CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:58 2024
+
+    Processing cells 
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+
+    Processing cells 
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+
+    Processing cells 
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+
+    Processing cells 
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+END_FUNC: psynopt_delay_opto   CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:58 2024
+START_FUNC: psynopt_delay_opto CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:58 2024
+Drc Mode Option: auto
+ABF: Best buffer=NBUFFX2: best inverter=INVX8: useInverter=true: effort=low: 2.349: default: 0
+Use advanced legalizer engine : 0
+ABF: Core Area = 11 X 11 ()
+
+    Processing cells 
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+
+    Processing cells 
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+END_FUNC: psynopt_delay_opto   CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:59 2024
+START_FUNC: psynopt_delay_opto CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:59 2024
+Drc Mode Option: auto
+ABF: Best buffer=NBUFFX2: best inverter=INVX8: useInverter=true: effort=low: 2.349: default: 0
+ABF: Core Area = 11 X 11 ()
+
+    Processing cells 
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+INFO: sweep stats: 0 gates / 0 nets gobbled, 0 gates (0 seq) simplified
+END_FUNC: psynopt_delay_opto   CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:59 2024
+START_FUNC: psynopt_delay_opto CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:59 2024
+
+    Processing cells .....10%.....20%.....30%.....40%.....50%.....60%.....70%.....80%.....90%.....100%
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:10     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+END_FUNC: psynopt_delay_opto   CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:59 2024
+START_FUNC: psynopt_delay_opto CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:59 2024
+
+    Processing cells .....10%.....20%.....30%.....40%.....50%.....60%.....70%.....80%.....90%.....100%
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:11     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+END_FUNC: psynopt_delay_opto   CPU:    491 s ( 0.14 hr) ELAPSE:   6131 s ( 1.70 hr) MEM-PEAK:   426 Mb Mon May 20 00:59:59 2024
+Information: The net parasitics of block i2c_master_top are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:i2c_master_top.design'. (TIM-125)
+Information: Design Average RC for design i2c_master_top  (NEX-011)
+Information: r = 0.521390 ohm/um, via_r = 0.867266 ohm/cut, c = 0.085304 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.562500 ohm/um, via_r = 0.869480 ohm/cut, c = 0.099792 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'i2c_master_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 666, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 9, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:11     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+
+INFO: sweep stats: 0 gates / 0 nets gobbled, 0 gates (0 seq) simplified
+
+Running final (timing-driven) placement step.
+----------------------------------------------------------------
+Running congestion-aware direct-timing-driven placement
+Information: Current block utilization is '0.61020', effective utilization is '0.61021'. (OPT-055)
+chip utilization before DTDP: 0.61
+Start Timing-driven placement
+
+Placement Options:
+Effort:                        medium_effort       
+Timing Driven:                 true                
+Buffering Aware Timing Driven: false               
+Seed locs:                     true                
+Incremental:                   false               
+Congestion:                    true                
+Congestion Effort:             medium              
+
+Printing options for 'place.coarse.*' (non-default only)
+place.coarse.continue_on_missing_scandef                :	 true                
+place.coarse.fix_cells_on_soft_blockages                :	 true                
+
+Start transferring placement data.
+Completed transferring placement data.
+Use advanced legalizer engine : 0
+Snapped 562 standard cells to the nearest  cellrow to improve the accuracy of congestion analysis.
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    5  Alloctr    5  Proc 1664 
+Printing options for 'route.common.*'
+
+Printing options for 'route.global.*'
+global.deterministic                                    :	 on                  
+global.placement_timing_driven_mode                     :	 false               
+global.timing_driven                                    :	 false               
+
+Begin global routing.
+Warning: Cell contains tie connections which are not connected to real PG. (ZRT-511)
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+Info: number of net_type_blockage: 0 
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used   67  Alloctr   66  Proc    0 
+[End of Read DB] Total (MB): Used   72  Alloctr   72  Proc 1664 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00,0.00,149.68,148.08)
+Number of routing layers = 9
+layer M1, dir Hor, min width = 0.14, min space = 0.14 pitch = 0.32
+layer M2, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+layer M3, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M4, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.64
+layer M5, dir Hor, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M6, dir Ver, min width = 0.16, min space = 0.16 pitch = 1.28
+layer M7, dir Hor, min width = 0.16, min space = 0.16 pitch = 2.56
+layer M8, dir Ver, min width = 0.16, min space = 0.16 pitch = 3.84
+layer M9, dir Hor, min width = 0.45, min space = 0.45 pitch = 5.12
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used   72  Alloctr   72  Proc 1664 
+Net statistics:
+Total number of nets     = 671
+Number of nets to route  = 664
+Number of single or zero port nets = 2
+5 nets are fully connected,
+ of which 5 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used   72  Alloctr   73  Proc 1664 
+Average gCell capacity  4.51	 on layer (1)	 M1
+Average gCell capacity  7.41	 on layer (2)	 M2
+Average gCell capacity  4.25	 on layer (3)	 M3
+Average gCell capacity  4.17	 on layer (4)	 M4
+Average gCell capacity  2.13	 on layer (5)	 M5
+Average gCell capacity  2.10	 on layer (6)	 M6
+Average gCell capacity  2.12	 on layer (7)	 M7
+Average gCell capacity  1.02	 on layer (8)	 M8
+Average gCell capacity  0.72	 on layer (9)	 M9
+Average number of tracks per gCell 9.10	 on layer (1)	 M1
+Average number of tracks per gCell 9.02	 on layer (2)	 M2
+Average number of tracks per gCell 4.57	 on layer (3)	 M3
+Average number of tracks per gCell 4.52	 on layer (4)	 M4
+Average number of tracks per gCell 2.29	 on layer (5)	 M5
+Average number of tracks per gCell 2.29	 on layer (6)	 M6
+Average number of tracks per gCell 2.29	 on layer (7)	 M7
+Average number of tracks per gCell 1.52	 on layer (8)	 M8
+Average number of tracks per gCell 1.16	 on layer (9)	 M9
+Number of gCells = 23868
+Current Stage stats:
+[End of Build Congestion map] Elapsed real time: 0:00:00 
+[End of Build Congestion map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion map] Total (MB): Used   72  Alloctr   73  Proc 1664 
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Data] Total (MB): Used   72  Alloctr   73  Proc 1664 
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used   72  Alloctr   73  Proc 1664 
+Information: Using 1 threads for routing. (ZRT-444)
+placement fast mode ON
+multi gcell levels ON
+
+Start GR phase 0
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Initial Routing] Total (MB): Used   73  Alloctr   73  Proc 1664 
+Initial. Routing result:
+Initial. Both Dirs: Overflow =    72 Max = 4 GRCs =   155 (2.92%)
+Initial. H routing: Overflow =    45 Max = 3 (GRCs =  1) GRCs =   105 (3.96%)
+Initial. V routing: Overflow =    27 Max = 4 (GRCs =  1) GRCs =    50 (1.89%)
+Initial. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =    26 Max = 4 (GRCs =  1) GRCs =    49 (1.85%)
+Initial. M3         Overflow =    45 Max = 3 (GRCs =  1) GRCs =   105 (3.96%)
+Initial. M4         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.04%)
+Initial. M5         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 18186.19
+Initial. Layer M1 wire length = 0.00
+Initial. Layer M2 wire length = 6556.30
+Initial. Layer M3 wire length = 8150.85
+Initial. Layer M4 wire length = 1813.83
+Initial. Layer M5 wire length = 1584.52
+Initial. Layer M6 wire length = 18.06
+Initial. Layer M7 wire length = 62.62
+Initial. Layer M8 wire length = 0.00
+Initial. Layer M9 wire length = 0.00
+Initial. Total Number of Contacts = 4876
+Initial. Via VIA12C count = 2264
+Initial. Via VIA23C count = 2212
+Initial. Via VIA34C count = 270
+Initial. Via VIA45C count = 121
+Initial. Via VIA56C count = 5
+Initial. Via VIA67C count = 4
+Initial. Via VIA78C count = 0
+Initial. Via VIA89C count = 0
+Initial. completed.
+
+Start GR phase 1
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used   73  Alloctr   73  Proc 1664 
+phase1. Routing result:
+phase1. Both Dirs: Overflow =    26 Max = 5 GRCs =    61 (1.15%)
+phase1. H routing: Overflow =     4 Max = 2 (GRCs =  2) GRCs =    21 (0.79%)
+phase1. V routing: Overflow =    21 Max = 5 (GRCs =  1) GRCs =    40 (1.51%)
+phase1. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =    21 Max = 5 (GRCs =  1) GRCs =    40 (1.51%)
+phase1. M3         Overflow =     4 Max = 2 (GRCs =  2) GRCs =    21 (0.79%)
+phase1. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M5         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 18385.75
+phase1. Layer M1 wire length = 0.00
+phase1. Layer M2 wire length = 6708.26
+phase1. Layer M3 wire length = 7846.27
+phase1. Layer M4 wire length = 1871.50
+phase1. Layer M5 wire length = 1720.87
+phase1. Layer M6 wire length = 64.15
+phase1. Layer M7 wire length = 174.71
+phase1. Layer M8 wire length = 0.00
+phase1. Layer M9 wire length = 0.00
+phase1. Total Number of Contacts = 4957
+phase1. Via VIA12C count = 2261
+phase1. Via VIA23C count = 2189
+phase1. Via VIA34C count = 321
+phase1. Via VIA45C count = 159
+phase1. Via VIA56C count = 14
+phase1. Via VIA67C count = 13
+phase1. Via VIA78C count = 0
+phase1. Via VIA89C count = 0
+phase1. completed.
+
+Start GR phase 2
+Current Stage stats:
+[End of Phase2 Routing] Elapsed real time: 0:00:00 
+[End of Phase2 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase2 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase2 Routing] Total (MB): Used   73  Alloctr   73  Proc 1664 
+phase2. Routing result:
+phase2. Both Dirs: Overflow =    20 Max = 3 GRCs =    22 (0.41%)
+phase2. H routing: Overflow =     2 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase2. V routing: Overflow =    18 Max = 3 (GRCs =  1) GRCs =    20 (0.75%)
+phase2. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M2         Overflow =    18 Max = 3 (GRCs =  1) GRCs =    20 (0.75%)
+phase2. M3         Overflow =     2 Max = 1 (GRCs =  2) GRCs =     2 (0.08%)
+phase2. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M5         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase2. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase2. Total Wire Length = 18391.23
+phase2. Layer M1 wire length = 0.00
+phase2. Layer M2 wire length = 6714.30
+phase2. Layer M3 wire length = 7845.70
+phase2. Layer M4 wire length = 1871.50
+phase2. Layer M5 wire length = 1720.87
+phase2. Layer M6 wire length = 64.15
+phase2. Layer M7 wire length = 174.71
+phase2. Layer M8 wire length = 0.00
+phase2. Layer M9 wire length = 0.00
+phase2. Total Number of Contacts = 4958
+phase2. Via VIA12C count = 2261
+phase2. Via VIA23C count = 2190
+phase2. Via VIA34C count = 321
+phase2. Via VIA45C count = 159
+phase2. Via VIA56C count = 14
+phase2. Via VIA67C count = 13
+phase2. Via VIA78C count = 0
+phase2. Via VIA89C count = 0
+phase2. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:00 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Stage (MB): Used    1  Alloctr    1  Proc    0 
+[End of Whole Chip Routing] Total (MB): Used   73  Alloctr   73  Proc 1664 
+
+Information: Global Routing terminated early: false (ZRT-103)
+
+Congestion utilization per direction:
+Average vertical track utilization   = 12.90 %
+Peak    vertical track utilization   = 100.00 %
+Average horizontal track utilization = 12.60 %
+Peak    horizontal track utilization = 100.00 %
+
+Current Stage stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   73  Proc 1664 
+GR Total stats:
+[GR: Done] Elapsed real time: 0:00:00 
+[GR: Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[GR: Done] Stage (MB): Used   67  Alloctr   67  Proc    0 
+[GR: Done] Total (MB): Used   73  Alloctr   73  Proc 1664 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+[DBOUT] Elapsed real time: 0:00:00 
+[DBOUT] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[DBOUT] Stage (MB): Used  -68  Alloctr  -68  Proc    0 
+[DBOUT] Total (MB): Used    4  Alloctr    5  Proc 1664 
+Final total stats:
+[End of Global Routing] Elapsed real time: 0:00:00 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Global Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Global Routing] Total (MB): Used    4  Alloctr    5  Proc 1664 
+Information: 9.13% of design has horizontal routing density above target_routing_density of 0.80.
+Information: 3.54% of design has vertical routing density above target_routing_density of 0.80.
+Running placement using 1 thread(s)
+Information: Automatic density control has selected the following settings: max_density 0.70, congestion_driven_max_util 0.90. (PLACE-027)
+coarse place 100% done.
+Information: Reducing cell density for 62.9% of the movable cells to alleviate congestion. This changes the average cell density in non-congested areas from 0.61 to 0.64. (PLACE-030)
+Information: Coarse placer weighted wire length estimate = 1.85028e+08
+Information: The RC mode used is VR for design 'i2c_master_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 666, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 9, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+eLpp: using low effort
+Warning: turning eLpp off because no active dynamic power scenarios were found
+Start transferring placement data.
+Information: Automatic timing control is enabled.
+DTDP placement: scenario=default
+Completed transferring placement data.
+Running placement using 1 thread(s)
+Information: Automatic density control has selected the following settings: max_density 0.70, congestion_driven_max_util 0.90. (PLACE-027)
+coarse place 50% done.
+coarse place 75% done.
+coarse place 100% done.
+Information: Coarse placer weighted wire length estimate = 1.81648e+08
+Completed Timing-driven placement, Elapsed time =   0: 0: 0 
+Moved 566 out of 566 cells, ratio = 1.000000
+Total displacement = 2531.521240(um)
+Max displacement = 17.670700(um), byte_controller/bit_controller/cSCL_reg_1_ (26.092100, 114.382301, 0) => (40.022202, 110.641701, 6)
+Displacement histogram:
+----------------------------------------------------------------
+Fixing logic constant
+----------------------------------------------------------------
+Running legalize_placement
+Use advanced legalizer engine : 0
+Start Legalization
+nplDplc2Placer::setParam(effort,1)
+nplDplc2Placer::setParam(debug,0)
+nplDplc2Placer::setParam(site_check,2)
+nplDplc2Placer::setParam(app_firm_wgt,0)
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 42 total shapes.
+Layer M2: cached 0 shapes out of 0 total shapes.
+Cached 462 vias out of 1686 total vias.
+
+Legalizing Top Level Design i2c_master_top ... 
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+
+Bounds/Regions In This Design:
+        Area    Num Cells  Exclusive Name
+ (square um)
+     14131.8          566        Yes DEFAULT_VA
+
+Starting legalizer.
+Warning: Exclusive bound 'DEFAULT' has no cells.
+Optimizing Exclusive Bound 'DEFAULT_VA' (2/2)
+    Done Exclusive Bound 'DEFAULT_VA' (2/2) (0 sec)
+Legalization complete (0 total sec)
+
+****************************************
+  Report : Placement Attempts
+  Site   : unit
+****************************************
+
+number of cells:                    566
+number of references:                33
+number of site rows:                 41
+number of locations attempted:    12778
+number of locations failed:           0  (0.0%)
+
+Legality of references at locations:
+0 references had failures.
+
+Legality of references in rows:
+0 references had row failures.
+
+****************************************
+  Report : Cell Displacements
+****************************************
+
+number of cells aggregated:         566 (9357 total sites)
+avg row height over cells:        2.880 um
+rms cell displacement:            0.856 um ( 0.30 row height)
+rms weighted cell displacement:   0.856 um ( 0.30 row height)
+max cell displacement:            2.491 um ( 0.86 row height)
+avg cell displacement:            0.756 um ( 0.26 row height)
+avg weighted cell displacement:   0.756 um ( 0.26 row height)
+number of cells moved:              566
+number of large displacements:        0
+large displacement threshold:     3.000 row height
+
+Displacements of worst 10 cells:
+Cell: byte_controller/bit_controller/U89 (NAND2X1)
+  Input location: (23.915,120.21)
+  Legal location: (25.88,118.68)
+  Displacement:   2.491 um ( 0.86 row height)
+Cell: byte_controller/bit_controller/sub_228/U4 (INVX0)
+  Input location: (58.7656,82.0802)
+  Legal location: (58.84,84.12)
+  Displacement:   2.041 um ( 0.71 row height)
+Cell: byte_controller/bit_controller/sub_228/U41 (NOR2X0)
+  Input location: (58.6546,85.5011)
+  Legal location: (57.56,87)
+  Displacement:   1.856 um ( 0.64 row height)
+Cell: byte_controller/U19 (NAND2X1)
+  Input location: (30.388,77.317)
+  Legal location: (30.36,75.48)
+  Displacement:   1.837 um ( 0.64 row height)
+Cell: byte_controller/U8 (INVX0)
+  Input location: (119.82,30.4972)
+  Legal location: (119.96,32.28)
+  Displacement:   1.788 um ( 0.62 row height)
+Cell: U138 (NAND2X1)
+  Input location: (50.2517,21.927)
+  Legal location: (49.88,23.64)
+  Displacement:   1.753 um ( 0.61 row height)
+Cell: byte_controller/bit_controller/sub_260/U5 (INVX0)
+  Input location: (131.525,88.537)
+  Legal location: (130.84,87)
+  Displacement:   1.683 um ( 0.58 row height)
+Cell: byte_controller/U63 (AO21X1)
+  Input location: (128.088,28.0554)
+  Legal location: (128.92,29.4)
+  Displacement:   1.581 um ( 0.55 row height)
+Cell: byte_controller/U60 (OR2X1)
+  Input location: (16.1111,68.4077)
+  Legal location: (15.96,66.84)
+  Displacement:   1.575 um ( 0.55 row height)
+Cell: byte_controller/bit_controller/U74 (OA21X1)
+  Input location: (75.6519,114.262)
+  Legal location: (74.84,112.92)
+  Displacement:   1.569 um ( 0.54 row height)
+
+Completed Legalization, Elapsed time =   0: 0: 0 
+Moved 566 out of 566 cells, ratio = 1.000000
+Total displacement = 1105.409912(um)
+Max displacement = 5.018500(um), byte_controller/bit_controller/U140 (105.732002, 117.353500, 0) => (104.919998, 121.559998, 4)
+Displacement histogram:
+Legalization succeeded.
+----------------------------------------------------------------
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:i2c_master_top.design'. (TIM-125)
+Information: Design Average RC for design i2c_master_top  (NEX-011)
+Information: r = 0.521390 ohm/um, via_r = 0.867266 ohm/cut, c = 0.085518 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.562500 ohm/um, via_r = 0.869480 ohm/cut, c = 0.100223 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'i2c_master_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 666, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 8, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:12     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+
+Information: The net parasitics of block i2c_master_top are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:i2c_master_top.design'. (TIM-125)
+Information: Design Average RC for design i2c_master_top  (NEX-011)
+Information: r = 0.521390 ohm/um, via_r = 0.867266 ohm/cut, c = 0.085518 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.562500 ohm/um, via_r = 0.869480 ohm/cut, c = 0.100223 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (150000 150000) (1346800 1330800)
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 2
+Use advanced legalizer engine : 0
+Information: Current block utilization is '0.61020', effective utilization is '0.61021'. (OPT-055)
+Information: The RC mode used is VR for design 'i2c_master_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 666, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 666, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      1:42:12     0.000     0.000  8623.411     0.000     0.000         3        57         0     0.000       426 
+
+Running final optimization step.
+
+Isolated 0 ports, skipped 0 ports
+Already Isolated 0 ports, Deleted 0 existing Isolation cells 
+
+
+npo-place-opt timing update complete          CPU:   405 s (  0.11 hr )  ELAPSE:  6133 s (  1.70 hr )  MEM-PEAK:   426 MB
+
+npo-place-opt initial QoR
+_________________________
+Scenario Mapping Table
+1: default
+
+Pathgroup Mapping Table
+1: **default**
+2: **async_default**
+3: **clock_gating_default**
+4: **in2reg_default**
+5: **reg2out_default**
+6: **in2out_default**
+7: clk
+
+-----------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV
+    1   1   0.0000     0.0000      0        -          -      -
+    1   2   0.0000     0.0000      0        -          -      -
+    1   3   0.0000     0.0000      0        -          -      -
+    1   4   0.0000     0.0000      0        -          -      -
+    1   5   0.0000     0.0000      0        -          -      -
+    1   6   0.0000     0.0000      0        -          -      -
+    1   7   0.0000     0.0000      0        -          -      -
+--------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage
+    1   *   0.0000     0.0000      0        -          -      -        -          -        -          -
+--------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage         Area    InstCnt     BufCnt     InvCnt
+    *   *   0.0000     0.0000      0   0.0000     0.0000      0        -          -        -          -      8623.41        566          3         57
+--------------------------------------------------------------------------------------------------------------------
+
+npo-place-opt initial QoR Summary       WNS        TNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
+npo-place-opt initial QoR Summary    0.0000     0.0000      0   0.0000     0.0000      0        -        -          -      8623.41        566
+Information: The netlist and extraction change observers are disabled for further incremental timing updates during on-route optimization. (TIM-119)
+INFO: using 1 threads
+npo-place-opt initialization complete         CPU:   405 s (  0.11 hr )  ELAPSE:  6133 s (  1.70 hr )  MEM-PEAK:   426 MB
+Use advanced legalizer engine : 0
+npo-place-opt optimization summary            SETUP-COST HOLD-COST LDRC-COST        AREA       POWER     ELAPSE (hr)
+Information: The netlist and extraction change observers are enabled for further incremental timing updates. (TIM-120)
+
+Use advanced legalizer engine : 0
+npo-place-opt optimization Phase 8 Iter  1          0.00      0.00         0       0.009           -           1.704
+ORB: timingScenario default timingCorner default
+INFO: No leakage and power scenarios. Using regular scenarios instead.
+INFO: No active leakage scenarios. Leakage will be turned off
+ORB: Nominal = 0.060209  Design MT = inf  Target = 0.481676 (8.000 nominal)  MaxRC = 0.173897
+ORB: timingScenario default timingCorner default
+INFO: No leakage and power scenarios. Using regular scenarios instead.
+INFO: No active leakage scenarios. Leakage will be turned off
+ORB: Nominal = 0.060209  Design MT = inf  Target = 0.481676 (8.000 nominal)  MaxRC = 0.173897
+npo-place-opt optimization Phase 8 Iter  2          0.00      0.00         0       0.009           -           1.704
+
+CCL: Total Usage Adjustment : 1
+Warning: Cell contains tie connections which are not connected to real PG. (ZRT-511)
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+Info: number of net_type_blockage: 0 
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Updating congestion ...
+Updating congestion ...
+INFO: Derive row count 3 from GR congestion map (13/4)
+INFO: Derive col count 3 from GR congestion map (13/4)
+npo-place-opt optimization Phase 9 Iter  1          0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 9 Iter  2          0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 9 Iter  3          0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 9 Iter  4          0.00      0.00         0       0.009           -           1.704
+PBO-INFO:  LR disabled
+npo-place-opt optimization Phase 9 Iter  5          0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 9 Iter  6          0.00      0.00         0       0.009           -           1.704
+PBO-INFO:  LR disabled
+npo-place-opt optimization Phase 9 Iter  7          0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 10 Iter  1         0.00      0.00         0       0.009           -           1.704
+
+Use advanced legalizer engine : 0
+npo-place-opt optimization Phase 11 Iter  1         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 12 Iter  1         0.00      0.00         0       0.009           -           1.704
+
+Use advanced legalizer engine : 0
+npo-place-opt optimization Phase 13 Iter  1         0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 13 Iter  2         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 14 Iter  1         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 15 Iter  1         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 16 Iter  1         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 17 Iter  1         0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 17 Iter  2         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 18 Iter  1         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 19 Iter  1         0.00      0.00         0       0.009           -           1.704
+Warning: No tie cell is available for constant fixing. (OPT-200)
+
+npo-place-opt optimization Phase 20 Iter  1         0.00      0.00         0       0.009           -           1.704
+Number of feedthrough buffers added 0
+
+npo-place-opt optimization Phase 21 Iter  1         0.00      0.00         0       0.009           -           1.704
+----------------------------------------------------------------
+running legalize_placement
+Information: The net parasitics of block i2c_master_top are cleared. (TIM-123)
+nplDplc2Placer::setParam(effort,1)
+nplDplc2Placer::setParam(debug,0)
+nplDplc2Placer::setParam(site_check,2)
+nplDplc2Placer::setParam(app_firm_wgt,0)
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 42 total shapes.
+Layer M2: cached 0 shapes out of 0 total shapes.
+Cached 462 vias out of 1686 total vias.
+
+Legalizing Top Level Design i2c_master_top ... 
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+
+Bounds/Regions In This Design:
+        Area    Num Cells  Exclusive Name
+ (square um)
+     14131.8          566        Yes DEFAULT_VA
+
+Starting legalizer.
+Warning: Exclusive bound 'DEFAULT' has no cells.
+Optimizing Exclusive Bound 'DEFAULT_VA' (2/2)
+    Done Exclusive Bound 'DEFAULT_VA' (2/2) (0 sec)
+Legalization complete (0 total sec)
+
+****************************************
+  Report : Placement Attempts
+  Site   : unit
+****************************************
+
+number of cells:                    566
+number of references:                34
+number of site rows:                 41
+number of locations attempted:    11590
+number of locations failed:           0  (0.0%)
+
+Legality of references at locations:
+0 references had failures.
+
+Legality of references in rows:
+0 references had row failures.
+
+****************************************
+  Report : Cell Displacements
+****************************************
+
+number of cells aggregated:         566 (9297 total sites)
+avg row height over cells:        2.880 um
+rms cell displacement:            0.000 um ( 0.00 row height)
+rms weighted cell displacement:   0.000 um ( 0.00 row height)
+max cell displacement:            0.000 um ( 0.00 row height)
+avg cell displacement:            0.000 um ( 0.00 row height)
+avg weighted cell displacement:   0.000 um ( 0.00 row height)
+number of cells moved:                0
+number of large displacements:        0
+large displacement threshold:     3.000 row height
+
+Displacements of worst 10 cells:
+Cell: U44 (AND3X1)
+  Input location: (31.64,32.28)
+  Legal location: (31.64,32.28)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: U129 (AND2X1)
+  Input location: (20.44,26.52)
+  Legal location: (20.44,26.52)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/bit_controller/U66 (AND2X1)
+  Input location: (59.8,92.76)
+  Legal location: (59.8,92.76)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/bit_controller/U119 (AND2X1)
+  Input location: (41.88,121.56)
+  Legal location: (41.88,121.56)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: U39 (AND2X1)
+  Input location: (34.84,29.4)
+  Legal location: (34.84,29.4)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/bit_controller/U117 (AND2X1)
+  Input location: (34.52,130.2)
+  Legal location: (34.52,130.2)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/bit_controller/U55 (AND2X1)
+  Input location: (72.28,107.16)
+  Legal location: (72.28,107.16)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/U77 (AND2X1)
+  Input location: (47.32,69.72)
+  Legal location: (47.32,69.72)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: U115 (AND2X1)
+  Input location: (42.84,32.28)
+  Legal location: (42.84,32.28)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: U110 (AND3X1)
+  Input location: (56.6,32.28)
+  Legal location: (56.6,32.28)
+  Displacement:   0.000 um ( 0.00 row height)
+
+Legalization succeeded.
+Total Legalizer CPU: 0.263
+----------------------------------------------------------------
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:i2c_master_top.design'. (TIM-125)
+Information: Design Average RC for design i2c_master_top  (NEX-011)
+Information: r = 0.521390 ohm/um, via_r = 0.867266 ohm/cut, c = 0.085518 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.562500 ohm/um, via_r = 0.869480 ohm/cut, c = 0.100223 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'i2c_master_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 666, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 666, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Use advanced legalizer engine : 0
+
+CCL: Total Usage Adjustment : 1
+Warning: Cell contains tie connections which are not connected to real PG. (ZRT-511)
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M9
+Warning: 923 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M1. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 933 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M2. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 460 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M3. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 466 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M4. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 229 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M5. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 232 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M6. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 113 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M7. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 76 vertical tracks are found in area (0, 0, 149.68, 148.08) of layer M8. The quantity of tracks is unreasonably high. (ZRT-642)
+Warning: 55 horizontal tracks are found in area (0, 0, 149.68, 148.08) of layer M9. The quantity of tracks is unreasonably high. (ZRT-642)
+Info: number of net_type_blockage: 0 
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 pitch 0.320 may be too small: wire/via-down 0.315, wire/via-up 0.330. (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+Updating congestion ...
+Updating congestion ...
+INFO: Derive row count 3 from GR congestion map (13/4)
+INFO: Derive col count 3 from GR congestion map (13/4)
+Use advanced legalizer engine : 0
+npo-place-opt optimization Phase 22 Iter  1         0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 22 Iter  2         0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 22 Iter  3         0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 22 Iter  4         0.00      0.00         0       0.009           -           1.704
+PBO-INFO:  LR disabled
+npo-place-opt optimization Phase 22 Iter  5         0.00      0.00         0       0.009           -           1.704
+
+Use advanced legalizer engine : 0
+npo-place-opt optimization Phase 23 Iter  1         0.00      0.00         0       0.009           -           1.704
+npo-place-opt optimization Phase 23 Iter  2         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 24 Iter  1         0.00      0.00         0       0.009           -           1.704
+ORB: timingScenario default timingCorner default
+INFO: No leakage and power scenarios. Using regular scenarios instead.
+INFO: No active leakage scenarios. Leakage will be turned off
+ORB: Nominal = 0.060209  Design MT = inf  Target = 0.481676 (8.000 nominal)  MaxRC = 0.173897
+ORB: timingScenario default timingCorner default
+INFO: No leakage and power scenarios. Using regular scenarios instead.
+INFO: No active leakage scenarios. Leakage will be turned off
+ORB: Nominal = 0.060209  Design MT = inf  Target = 0.481676 (8.000 nominal)  MaxRC = 0.173897
+npo-place-opt optimization Phase 24 Iter  2         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 25 Iter  1         0.00      0.00         0       0.009           -           1.704
+----------------------------------------------------------------
+running legalize_placement
+Information: The net parasitics of block i2c_master_top are cleared. (TIM-123)
+nplDplc2Placer::setParam(effort,1)
+nplDplc2Placer::setParam(debug,0)
+nplDplc2Placer::setParam(site_check,2)
+nplDplc2Placer::setParam(app_firm_wgt,0)
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 42 total shapes.
+Layer M2: cached 0 shapes out of 0 total shapes.
+Cached 462 vias out of 1686 total vias.
+
+Legalizing Top Level Design i2c_master_top ... 
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+
+Bounds/Regions In This Design:
+        Area    Num Cells  Exclusive Name
+ (square um)
+     14131.8          566        Yes DEFAULT_VA
+
+Starting legalizer.
+Warning: Exclusive bound 'DEFAULT' has no cells.
+Optimizing Exclusive Bound 'DEFAULT_VA' (2/2)
+    Done Exclusive Bound 'DEFAULT_VA' (2/2) (0 sec)
+Legalization complete (0 total sec)
+
+****************************************
+  Report : Placement Attempts
+  Site   : unit
+****************************************
+
+number of cells:                    566
+number of references:                34
+number of site rows:                 41
+number of locations attempted:    11590
+number of locations failed:           0  (0.0%)
+
+Legality of references at locations:
+0 references had failures.
+
+Legality of references in rows:
+0 references had row failures.
+
+****************************************
+  Report : Cell Displacements
+****************************************
+
+number of cells aggregated:         566 (9297 total sites)
+avg row height over cells:        2.880 um
+rms cell displacement:            0.000 um ( 0.00 row height)
+rms weighted cell displacement:   0.000 um ( 0.00 row height)
+max cell displacement:            0.000 um ( 0.00 row height)
+avg cell displacement:            0.000 um ( 0.00 row height)
+avg weighted cell displacement:   0.000 um ( 0.00 row height)
+number of cells moved:                0
+number of large displacements:        0
+large displacement threshold:     3.000 row height
+
+Displacements of worst 10 cells:
+Cell: U44 (AND3X1)
+  Input location: (31.64,32.28)
+  Legal location: (31.64,32.28)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: U129 (AND2X1)
+  Input location: (20.44,26.52)
+  Legal location: (20.44,26.52)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/bit_controller/U66 (AND2X1)
+  Input location: (59.8,92.76)
+  Legal location: (59.8,92.76)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/bit_controller/U119 (AND2X1)
+  Input location: (41.88,121.56)
+  Legal location: (41.88,121.56)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: U39 (AND2X1)
+  Input location: (34.84,29.4)
+  Legal location: (34.84,29.4)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/bit_controller/U117 (AND2X1)
+  Input location: (34.52,130.2)
+  Legal location: (34.52,130.2)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/bit_controller/U55 (AND2X1)
+  Input location: (72.28,107.16)
+  Legal location: (72.28,107.16)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: byte_controller/U77 (AND2X1)
+  Input location: (47.32,69.72)
+  Legal location: (47.32,69.72)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: U115 (AND2X1)
+  Input location: (42.84,32.28)
+  Legal location: (42.84,32.28)
+  Displacement:   0.000 um ( 0.00 row height)
+Cell: U110 (AND3X1)
+  Input location: (56.6,32.28)
+  Legal location: (56.6,32.28)
+  Displacement:   0.000 um ( 0.00 row height)
+
+Legalization succeeded.
+Total Legalizer CPU: 0.265
+----------------------------------------------------------------
+Information: The stitching and editing of coupling caps is turned OFF for design 'I2C:i2c_master_top.design'. (TIM-125)
+Information: Design Average RC for design i2c_master_top  (NEX-011)
+Information: r = 0.521390 ohm/um, via_r = 0.867266 ohm/cut, c = 0.085518 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.562500 ohm/um, via_r = 0.869480 ohm/cut, c = 0.100223 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'i2c_master_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 666, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 666, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+npo-place-opt optimization Phase 26 Iter  1         0.00      0.00         0       0.009           -           1.704
+
+npo-place-opt optimization Phase 27 Iter  1         0.00      0.00         0       0.009           -           1.704
+Number of feedthrough buffers added 0
+Enable dominated scenarios
+
+npo-place-opt optimization complete                 0.00      0.00         0       0.009           -           1.704
+Co-efficient Ratio Summary:
+4.193421605155  6.578038173730  2.479639287277  7.744187540401  0.485050000353  3.179565833784  -5.567214854587  -2.894454487461  -6.565921317863  9.017833612864  3.104634200933
+9.863439509851  6.078123964085  2.744208341123  8.318115604907  9.699225026083  2.464623950064  -1.382370321226  -9.387184129619  -3.142429506669  -0.968752889964  6.613942064307  4.146524393224  7.876358218112  2.191130803696
+0.963734141094  2.700148443881  3.840450064440  3.750206053169  7.663458842299  6.212201167950  -7.759678573967  -7.862243156717  -0.402387077150  -0.032845195897  0.596973853484  4.701233996892  7.205135812169  8.278356098268
+1.183725190997  3.334436408244  5.867609731622  7.173894385364  9.669819999761  7.591487347087  -7.632106493266  -7.679078163326  -9.831314388630  -1.878805917928  3.230834684642  1.226226637326  7.050450794780  2.403923873631
+6.139852544054  4.100210066110  1.274718589655  4.570746653063  5.624878808820  7.826857253678  -4.759133518263  -5.409027026377  -2.609823752834  -0.626142638674  6.381438993022  9.187420622495  0.513656096621  5.027575318562
+6.119813446103  6.181472312107  1.581675365776  7.486041822107  9.584562469756  2.041727387119  -3.921160967338  -0.650488782345  -9.472458002409  -3.368484494994  4.897973880133  6.860195844452  2.000104351691  9.095340607689
+2.197041709512  0.915900067443  5.466092308426  8.142690055883  4.607193265224  8.244463794567  -3.504870805451  -1.682716112888  -7.173433818510  -9.939562808373  3.617608583106  8.946728237652  1.169969832707  4.529941356262
+3.090979409795  5.580726136993  1.131397763510  0.721709625254  7.515947417690  0.649322209371  -1.017031143513  -5.811519766269  -5.826730983342  -4.349383392435  0.216062729830  9.612198022527  7.311156082104  0.823514841628
+0.356161286693  8.022019569284  2.603132585844  5.024802551363  1.359359521353  5.407563451201  -2.804123577518  -1.265300152200  -0.417760413533  -1.833872565081  6.448303548601  4.848329712548  2.936801355033  8.671499824225
+4.212305316610  9.007627270112  3.308107178452  5.607471109985  8.514743640423  2.764676979434  -9.324216038770  -1.551199089997  -2.300508302625  -0.754685130179  1.961277222119  2.781359941418  3.355375455650  9.437904593602
+9.136702642545  9.020209208464  9.978471495117  7.467457734047  3.171274721421  9.815920740044  -4.331414737138  -0.413524084361  -3.309910298619  -7.452798306103  1.902673735042  5.623453859547  7.269363308696  3.367408803784
+7.093641515702  7.411336156476  6.944246976650  5.239565921087  4.802189647382  3.894401463832  -4.531610519342  -1.605155757803  -8.173730347963  -9.287277874418  7.540257859028  0.000309917956  5.833784856721  4.754582989445
+4.387461656592  1.217863901793  7.505874310467  0.800933986343  9.509851607812  3.964085274420  -8.341123931811  -5.604907069922  -5.026083346462  -3.950064238237  0.221072749231  4.029665914242  9.406669396875  2.789969361318
+0.723294414657  8.793224787635  8.918112219113  5.103696096373  4.141094270014  8.443881384045  -0.064440475020  -6.053169866345  -8.842299721220  -1.167950875967  8.473713597747  3.056763640238  7.977150303284  5.095892759611
+1.512371470128  7.396892720513  5.512169827835  1.398268118372  5.190997333443  6.408244586760  -9.731622817389  -4.385364066981  -9.999761859148  -7.347087863210  6.393012578420  8.063372583131  4.288630487880  5.817923023007
+2.343539122627  0.037326705045  0.494780240392  8.173631613985  2.544054410021  0.066110127471  -8.589655557074  -6.653063662487  -8.808820882685  -7.253678575913  3.418019351425  7.926323860982  3.652834362614  2.538679338167
+6.652919918747  4.022495051365  6.796621502757  0.618562611981  3.446103618147  2.312107158167  -5.365776848604  -1.822107058456  -2.469756304172  -7.387119492116  0.867184876561  8.682391547245  8.902409636848  4.394999189711
+1.549020686014  9.244452200010  4.051691909534  5.907689219704  1.709512091590  0.067443546609  -2.308426914269  -0.055883560719  -3.265224924446  -3.794567450487  0.705207979794  6.012834317343  3.718510293956  2.708378061785
+2.772683894677  2.637652116996  9.532707452994  6.656262309097  9.409795558072  6.136993113139  -7.763510172170  -9.625254851594  -7.417690164932  -2.209371201703  1.043369392674  9.666215182673  0.883342734938  3.292430721621
+6.918317961214  2.422527731115  6.782104082351  9.141628035616  1.286693802201  9.569284260313  -2.585844602480  -2.551363235935  -9.521353640756  -3.451201380412  3.477364937053  0.052256641776  0.313533483387  2.465086344855
+7.737188484837  3.112548293680  1.055033867149  4.124225421230  5.316610900762  7.270112330810  -7.178452660747  -1.109985951474  -3.640423376467  -6.979434032421  6.938526966632  9.989943830050  8.202625375468  5.030174896142
+1.411696278130  3.341418335537  5.155650943790  9.893602913670  2.642545902020  9.208464997847  -1.495117846745  -7.734047417127  -4.721421081592  -0.740044533141  4.637984852875  4.984317930991  0.198619045279  8.206108890282
+
+npo-place-opt final QoR
+_______________________
+Scenario Mapping Table
+1: default
+
+Pathgroup Mapping Table
+1: **default**
+2: **async_default**
+3: **clock_gating_default**
+4: **in2reg_default**
+5: **reg2out_default**
+6: **in2out_default**
+7: clk
+
+-----------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV
+    1   1   0.0000     0.0000      0   0.0000     0.0000      0
+    1   2   0.0000     0.0000      0   0.0000     0.0000      0
+    1   3   0.0000     0.0000      0   0.0000     0.0000      0
+    1   4   0.0000     0.0000      0   0.0000     0.0000      0
+    1   5   0.0000     0.0000      0   0.0000     0.0000      0
+    1   6   0.0000     0.0000      0   0.0000     0.0000      0
+    1   7   0.0000     0.0000      0   0.0000     0.0000      0
+--------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage
+    1   *   0.0000     0.0000      0   0.0000     0.0000      0        -          -        -          -
+--------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage         Area    InstCnt     BufCnt     InvCnt
+    *   *   0.0000     0.0000      0   0.0000     0.0000      0        -          -        -          -      8568.12        566          3         57
+--------------------------------------------------------------------------------------------------------------------
+
+npo-place-opt final QoR Summary         WNS        TNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
+npo-place-opt final QoR Summary      0.0000     0.0000      0   0.0000     0.0000      0        -        -          -      8568.12        566
+
+npo-place-opt command complete                CPU:   408 s (  0.11 hr )  ELAPSE:  6136 s (  1.70 hr )  MEM-PEAK:   464 MB
+npo-place-opt command statistics  CPU=4 sec (0.00 hr) ELAPSED=4 sec (0.00 hr) MEM-PEAK=0.453 GB
+Information: Running auto PG connection. (NDM-099)
+1

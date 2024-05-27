@@ -1,0 +1,46 @@
+****************************************
+Report : area
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 01:41:12 2024
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /home/ICer/logic_project/DB/saed90nm_typ.db)
+
+Number of ports:                          185
+Number of nets:                           825
+Number of cells:                          583
+Number of combinational cells:            422
+Number of sequential cells:               157
+Number of macros/black boxes:               0
+Number of buf/inv:                         69
+Number of references:                      21
+
+Combinational area:               3771.187194
+Buf/Inv area:                      390.758410
+Noncombinational area:            4827.340860
+Macro/Black Box area:                0.000000
+Net Interconnect area:             514.908246
+
+Total cell area:                  8598.528054
+Total area:                       9113.436300
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------
+i2c_master_top                    8598.5281    100.0  1117.9008  1660.7232  0.0000  i2c_master_top
+byte_controller                   5819.9040     67.7   695.8080   806.4000  0.0000  i2c_master_byte_ctrl
+byte_controller/bit_controller    4317.6960     50.2  1371.3408  2360.2176  0.0000  i2c_master_bit_ctrl
+byte_controller/bit_controller/sub_228  314.2656     3.7  314.2656    0.0000 0.0000 i2c_master_bit_ctrl_DW01_dec_1
+byte_controller/bit_controller/sub_260  271.8720     3.2  271.8720    0.0000 0.0000 i2c_master_bit_ctrl_DW01_dec_0
+--------------------------------  ---------  -------  ---------  ---------  ------  ------------------------------
+Total                                                 3771.1872  4827.3409  0.0000
+
+1

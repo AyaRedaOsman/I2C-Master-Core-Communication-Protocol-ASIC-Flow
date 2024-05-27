@@ -1,0 +1,26 @@
+****************************************
+ Report : check_design 
+ Options: { dp_pre_floorplan }
+ Design : i2c_master_top
+ Version: O-2018.06-SP1
+ Date   : Mon May 20 00:58:28 2024
+****************************************
+
+Running atomic-check 'dp_pre_floorplan'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  DPUI-088            9          No preferred routing direction defined for routing layer %s
+  DPUI-103            2          No layer with the routing direction %s
+  ----------------------------------------------------------------------------------------------------
+  Total 11 non-EMS messages : 11 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+Information: Non-EMS messages are saved into file 'check_design2024May20005828.log'.
+1

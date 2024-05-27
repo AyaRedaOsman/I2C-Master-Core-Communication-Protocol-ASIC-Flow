@@ -1,0 +1,2 @@
+-1 12 39 15 0 33 5022 170 3 FMR_ELAB-022/home/vlsi/I2C_pro/rtl/i2c_master_top.v/i2c_master_topPrivate message for simsyn report
+-1 12 39 15 0 33 5022 198 3 FMR_ELAB-022/home/vlsi/I2C_pro/rtl/i2c_master_top.v/i2c_master_topPrivate message for simsyn report

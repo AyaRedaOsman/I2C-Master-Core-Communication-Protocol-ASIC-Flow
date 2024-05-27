@@ -1,0 +1,36 @@
+****************************************
+Report : report_tracks
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 00:58:29 2024
+****************************************
+Layer          Direction     Start         Tracks    Pitch       Attr
+------------------------------------------------------------------------
+M1             X             0.280         467       0.320       default
+M1             Y             0.160         463       0.320       default
+M1             Y             0.280         462       0.320       default
+M2             X             0.160         468       0.320       default
+M2             X             0.280         467       0.320       default
+M2             Y             0.280         462       0.320       default
+M3             Y             0.280         231       0.640       default
+M3             X             0.280         234       0.640       default
+M3             Y             0.320         232       0.640       default
+M4             Y             0.280         231       0.640       default
+M4             X             0.280         234       0.640       default
+M4             X             0.320         234       0.640       default
+M5             Y             0.920         115       1.280       default
+M5             X             0.920         117       1.280       default
+M5             Y             0.640         116       1.280       default
+M6             Y             0.920         115       1.280       default
+M6             X             0.920         117       1.280       default
+M6             X             0.640         117       1.280       default
+M7             Y             1.280         58        2.560       default
+M7             X             2.200         58        2.560       default
+M7             Y             2.200         57        2.560       default
+M8             X             3.480         39        3.840       default
+M8             Y             3.480         38        3.840       default
+M8             X             1.920         39        3.840       default
+M9             X             4.760         29        5.120       default
+M9             Y             4.760         28        5.120       default
+M9             Y             2.560         29        5.120       default
+1

@@ -1,0 +1,24 @@
+****************************************
+Report : report_placement
+Design : i2c_master_top
+Version: O-2018.06-SP1
+Date   : Mon May 20 01:00:04 2024
+****************************************
+
+  Wire length report (all)
+  ==================
+  wire length in design i2c_master_top: 14861.775 microns.
+  wire length in design i2c_master_top (see through blk pins): 14861.775 microns.
+
+  Physical hierarchy violations report
+  ====================================
+  Violations in design i2c_master_top:
+     0 cells have placement violation.
+
+  Voltage area violations report
+  ====================================
+  Voltage area placement violations in design i2c_master_top:
+     0 cells placed outside the voltage area which they belong to.
+
+Information: Default error view i2c_master_top_dpplace.err is created in GUI error browser. (DPP-054)
+1
